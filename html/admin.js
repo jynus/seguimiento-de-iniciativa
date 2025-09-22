@@ -286,11 +286,11 @@ function hasExactDatalistOption(listId, value) {
 let state = {
   activeIdx: 0,
   party: [
-    { id:"1", nombre:"Swalin Coppermaster", ca:19, pv:{cur:38,max:45}, mov:{cur:9,max:9}, accion:false, adicional:false, reaccion:false, icon:null, condiciones:["concentrado"] },
-    { id:"2", nombre:"Gianmarco Soresi", ca:17, pv:{cur:26,max:33}, mov:{cur:6,max:6}, accion:false, adicional:false, reaccion:false, icon:null, condiciones:["envenenado"] },
-    { id:"3", nombre:"Elara Swiftwind", ca:15, pv:{cur:22,max:28}, mov:{cur:9,max:9}, accion:false, adicional:false, reaccion:false, icon:null, condiciones:["miedo","prone"] },
-    { id:"4", nombre:"Un dragón muy malote", ca:16, pv:{cur:18,max:24}, mov:{cur:7,max:7}, accion:false, adicional:false, reaccion:false, icon:null, condiciones:["escondido"] }
-  ]
+  { id:"1", "nombre": "Grerin Beibalar", "icon": "grerin.webp", "ca": 16, "pv": {"cur":33, "max":33, "tmp":0}, "mov": {"cur":9,"max":9}, accion:false, adicional:false, reaccion:false, condiciones:[]},
+  { id:"2", "nombre": "Elkyz Myrthar", "icon": "elkyz.webp", "ca": 12, "pv": {"cur":34,"max":34, "tmp":0}, "mov": {"cur":9,"max":9}, "accion":false, "adicional":false, "reaccion":false, condiciones:[]},
+  { id:"3", "nombre": "Ragdahr Kindhammer", "icon": "ragdahr.webp", "ca": 16, "pv": {"cur":48, "max":48,"tmp":0}, "mov": {"cur":9,"max":9}, accion:false, adicional:false, reaccion:false, condiciones:[]},
+  { id:"4", "nombre": "Rairish Drechash", "icono": "rairish.webp", "ca": 18, "pv": {"cur": 49, "max":49, "tmp":0}, "mov": {"cur":9,"max":9}, accion:false, adicional:false, reaccion:false, condiciones:[]}
+]
 };
 
 // ====== Render ======
