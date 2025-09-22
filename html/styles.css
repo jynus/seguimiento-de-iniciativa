@@ -26,11 +26,12 @@ th,td{
 }
 
 /* Anchuras */
+col.ini{width:42px}
 col.cn{width:42px}
-col.ca{width:72px}
-col.pv{width:110px}
-col.ax, col.ad, col.rx{width:76px}
-col.mv{width:100px}
+col.ca{width:42px}
+col.pv{width:85px}
+col.ax, col.ad, col.rx{width:86px}
+col.mv{width:50px}
 col.tools{width:160px}
 
 /* avatar */
@@ -43,7 +44,7 @@ col.tools{width:160px}
 
 /* toggles */
 .pill{
-  min-width:68px;height:18px;padding:0 8px;border-radius:6px;border:1px solid #2a3147;
+  min-width:60px;height:18px;padding:0 8px;border-radius:6px;border:1px solid #2a3147;
   display:inline-flex;align-items:center;justify-content:center;user-select:none
 }
 .pill.on{background:color-mix(in oklab, var(--accent) 24%, transparent);border-color:color-mix(in oklab, var(--accent) 60%, transparent);color:#dff0ff}
@@ -51,17 +52,42 @@ col.tools{width:160px}
 
 /* movimiento */
 .mv{display:inline-flex;align-items:center;gap:4px;font-variant-numeric:tabular-nums}
-.mv .pair{min-width:48px;text-align:right}
+.mv .pair{min-width:42px;text-align:right}
 
 /* inputs admin */
 input[type="text"], input[type="number"]{
-  width:80px;background:#0e1220;color:var(--text);border:1px solid var(--line);border-radius:6px;padding:2px 4px
+  width:24px;background:#0e1220;color:var(--text);border:1px solid var(--line);border-radius:6px;padding:2px 4px
 }
-input.small{width:40px}
+input.small{width:24px}
 
 /* estado fila */
 tbody tr.active{outline:2px solid var(--accent-2);outline-offset:-2px;background:linear-gradient(90deg, rgba(112,224,137,.12), transparent)}
 tbody tr:hover{background:rgba(255,255,255,.03)}
 
 .muted{color:#9aa3b2}
+
+/* Remove number spinners (Chrome/Edge/Opera) */
+input[type="number"].no-spin::-webkit-outer-spin-button,
+input[type="number"].no-spin::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Remove number spinners (Firefox) */
+input[type="number"].no-spin {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+/* Optional: visual cue on focus (keeps your existing styling) */
+input[type="number"].no-spin:focus {
+  outline: 1px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Row that is hidden for clients (admin still sees it) */
+tbody tr.hidden-for-clients{
+  background: rgba(160, 170, 185, .18);
+}
+
+/* tiny emoji buttons look better slightly tighter */
+.btn.emoji{ padding: 2px 6px; font-size: 14px; line-height: 1; }
 

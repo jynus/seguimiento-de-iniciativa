@@ -1,6 +1,6 @@
 // ====== Config ======
 const WS_URL = new URLSearchParams(location.search).get("ws") || "wss://jynus.com:8443";
-const COND_URL = "../common/conditions.json";
+const COND_URL = "conditions.json";
 
 // ====== Condiciones ======
 let CONDITIONS = [];
@@ -48,6 +48,13 @@ function svgAvatar(initials,bg="#60a5fa",fg="#0f1115"){
   return `data:image/svg+xml;charset=utf-8,${svg}`;
 }
 
+// Muestra 7 en vez de 7.0, pero deja 7.5 tal cual
+function fmtHalf(n) {
+  return Number.isFinite(n)
+    ? (Number.isInteger(n) ? String(n) : String(n).replace(/\.0$/, ""))
+    : "—";
+}
+
 // ====== Estado ======
 let state = { party: [], activeIdx: 0 };
 
@@ -78,12 +85,14 @@ function chips(list, pv){
 
 function render(){
   rows.innerHTML = "";
-  if (!state.party.length){
+  const list = (state.party || []).filter(p => p.visible !== false);
+  if (!list.length){
     const tr=document.createElement("tr"); const td0=td("Sin datos"); td0.colSpan=9; td0.className="muted"; tr.appendChild(td0); rows.appendChild(tr);
     return;
   }
-  state.party.forEach((p,idx)=>{
-    const tr=document.createElement("tr"); if(idx===state.activeIdx) tr.classList.add("active");
+  list.forEach((p,idx)=>{
+    const tr=document.createElement("tr");
+    if(state.party[state.activeIdx]?.id === p.id) tr.classList.add("active");
     if(typeof p.pv!=="object") p.pv={cur:p.pv??0,max:p.pv??0};
     if(typeof p.mov==="number") p.mov={cur:p.mov,max:p.mov};
     if(!p.mov) p.mov={cur:0,max:0};
@@ -98,8 +107,11 @@ function render(){
     const tdA=td(); tdA.innerHTML=`<span class="pill ${p.accion?'on':'off'}">${p.accion?'Usada':'Disponible'}</span>`;
     const tdB=td(); tdB.innerHTML=`<span class="pill ${p.adicional?'on':'off'}">${p.adicional?'Usada':'Disponible'}</span>`;
     const tdR=td(); tdR.innerHTML=`<span class="pill ${p.reaccion?'on':'off'}">${p.reaccion?'Usada':'Disponible'}</span>`;
-    const tdM=td(); { const box=document.createElement("span"); box.className="mv";
-      const pr=document.createElement("span"); pr.className="pair"; pr.textContent=`${p.mov.cur}/${p.mov.max}`; box.append(pr,document.createTextNode(" m"));
+    const tdM=td(); {
+      const box=document.createElement("span"); box.className="mv";
+      const pr=document.createElement("span"); pr.className="pair";
+      pr.textContent = `${fmtHalf(p.mov.cur)}/${fmtHalf(p.mov.max)}`;
+      box.append(pr,document.createTextNode(" m"));
       tdM.appendChild(box);
     }
     const tdC=td(); tdC.appendChild(chips(p.condiciones||[], p.pv));

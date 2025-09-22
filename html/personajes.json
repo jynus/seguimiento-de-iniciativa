@@ -1,0 +1,6 @@
+[
+  { "nombre": "Grerin Beibalar", "icon": "grerin.webp", "ca": 16, "pv": 33, "mov": 9 },
+  { "nombre": "Elkyz Myrthar", "icon": "elkyz.webp", "ca": 12, "pv": 34, "mov": 9 },
+  { "nombre": "Ragdahr Kindhammer", "icon": "ragdahr.webp", "ca": 16, "pv": 48, "mov": 7.5 },
+  { "nombre": "Rairish Drechash", "icono": "rairish.webp", "ca": 18, "pv": 49, "mov": 9 }
+]

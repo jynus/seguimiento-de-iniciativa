@@ -149,7 +149,7 @@ def build_ssl_context(certfile: Optional[str], keyfile: Optional[str]) -> Option
 async def main():
     parser = ArgumentParser(description="WS broadcast server (admin -> all)")
     parser.add_argument("--host", default=os.environ.get("HOST", "0.0.0.0"))
-    parser.add_argument("--port", type=int, default=int(os.environ.get("PORT", "8787")))
+    parser.add_argument("--port", type=int, default=int(os.environ.get("PORT", "8443")))
     parser.add_argument("--admin-token", default=os.environ.get("ADMIN_TOKEN", ""), help="Si se define, se exige en hello del admin.")
     parser.add_argument("--certfile", default=os.environ.get("CERTFILE", ""), help="Ruta a cert PEM (para wss).")
     parser.add_argument("--keyfile",  default=os.environ.get("KEYFILE",  ""), help="Ruta a key PEM (para wss).")
