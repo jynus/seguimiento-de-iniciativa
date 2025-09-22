@@ -1,13 +1,12 @@
 ## App de control de iniciativa en español
 
-Tiene los siguientes 5 componentes:
+Tiene los siguientes 3 componentes:
 
 * `corner-iframe-overlay`: Extensión compatible con Firefox y Chrome que inserta un iframe en Maps de DNDBeyond y muesta el cliente https://jynus.com/dnd/
-* `html-admin`: Interfaz administrativa donde se puede ediar el estado de la iniciativa
-* `html-client`: Interfaz de solo lectura del cliente donde se puede visualizar los cambios de estado de la iniciativa
+* `html`: Interfaz de cliente en solo lectura (index.html)y administrativa -editable for el narrador- (admin.html) donde se puede visualizar y editar el estado de la iniciativa. También incluye los elementos comunes a ambos: datos json y hojas de estilo.
 * `websocket-server`: Servidor python que recive eventos del cliente admin y los rebrodcastea a todos los clientes normales
-* `common`: Datos y hojas de estilo comunes y públicos a los clientes normals y admin (estado persistido, CSS, lista de condiciones válidas, etc.)
 
-html-admin, html-client y common deberían desplegarse en un servidor web para su uso.
+
+html deberían desplegarse en un servidor web para su uso.
 websocket-server debería instalarse fuera del servidor web, y por defecto escucha en el puerto 8447. Opcionalmente, se le puede pasar parámetros para usar certificados TLS (recomendado).
-corner-iframe-overlay 
+corner-iframe-overlay debería comprimirse para su publicación (aunque puede probarse sin comprimir en el modo desarrollador de extensiones tanto en Firefox como en Chrome).
