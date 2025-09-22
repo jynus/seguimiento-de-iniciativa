@@ -1,0 +1,22 @@
+[
+  { "key": "blinded",       "english": "Blinded",       "spanish": "Cegado",        "color": "#f7e247", "synonyms": ["cegado","ciego","blind"] },
+  { "key": "charmed",       "english": "Charmed",       "spanish": "Hechizado",     "color": "#ff77e1", "synonyms": ["hechizado","encantado","charm"] },
+  { "key": "deafened",      "english": "Deafened",      "spanish": "Ensordecido",   "color": "#a78bfa", "synonyms": ["ensordecido","sordo","deaf"] },
+  { "key": "frightened",    "english": "Frightened",    "spanish": "Asustado",      "color": "#f59e0b", "synonyms": ["asustado","miedo","frightened"] },
+  { "key": "grappled",      "english": "Grappled",      "spanish": "Agarrado",      "color": "#afa47a", "synonyms": ["agarrado","asido","grapple"] },
+  { "key": "incapacitated", "english": "Incapacitated", "spanish": "Incapacitado",  "color": "#64748b", "synonyms": ["incapacitado","incapaz","incapacitated"] },
+  { "key": "invisible",     "english": "Invisible",     "spanish": "Invisible",     "color": "#111827", "synonyms": ["invisible","oculto","hidden"] },
+  { "key": "paralyzed",     "english": "Paralyzed",     "spanish": "Paralizado",    "color": "#6b7280", "synonyms": ["paralizado","parálisis","paralyzed"] },
+  { "key": "petrified",     "english": "Petrified",     "spanish": "Petrificado",   "color": "#9ca3af", "synonyms": ["petrificado","piedra","petrified"] },
+  { "key": "poisoned",      "english": "Poisoned",      "spanish": "Envenenado",    "color": "#22c55e", "synonyms": ["envenenado","veneno","poisoned"] },
+  { "key": "prone",         "english": "Prone",         "spanish": "Derribado",     "color": "#60a5fa", "synonyms": ["derribado","tumbado","prone"] },
+  { "key": "restrained",    "english": "Restrained",    "spanish": "Inmovilizado",  "color": "#afa47a", "synonyms": ["restringido","inmovilizado","restrained"] },
+  { "key": "stunned",       "english": "Stunned",       "spanish": "Aturdido",      "color": "#a78bfa", "synonyms": ["aturdido","stunned"] },
+  { "key": "unconscious",   "english": "Unconscious",   "spanish": "Inconsciente",  "color": "#475569", "synonyms": ["inconsciente","desmayado","unconscious"] },
+  { "key": "exhausted",     "english": "Exhausted",     "spanish": "Exhausto",      "color": "#f59e0b", "synonyms": ["exhausto","cansado","fatigado","exhaustion"] },
+  { "key": "dazed",         "english": "Dazed",         "spanish": "Atontado",      "color": "#c084fc", "synonyms": ["atontado","dazed"] },
+  { "key": "concentrating", "english": "Concentrating", "spanish": "Concentrado",   "color": "#ffffff", "synonyms": ["concentrado","concentración","concentration"] },
+  { "key": "hidden",        "english": "Hidden",        "spanish": "Escondido",     "color": "#111827", "synonyms": ["escondido","oculto","hidden"] },
+  { "key": "bleeding",      "english": "Bleeding",      "spanish": "Sangrando",     "color": "#b91c1c", "synonyms": ["sangrando","sangrado","bleeding"] }
+]
+

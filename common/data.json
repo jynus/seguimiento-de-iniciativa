@@ -1,0 +1,54 @@
+[
+  {
+    "id": "1",
+    "iniciativa": 19,
+    "nombre": "Rairish",
+    "ca": 19,
+    "pv": { "cur": 38, "max": 45, "tmp": 0 },
+    "mov": { "cur": 9, "max": 9 },
+    "accion": false,
+    "adicional": false,
+    "reaccion": false,
+    "icon": "rairish.webp",
+    "condiciones": ["cansado"]
+  },
+  {
+    "id": "2",
+    "iniciativa": 16,
+    "nombre": "Grerin",
+    "ca": 17,
+    "pv": { "cur": 26, "max": 33, "tmp": 0 },
+    "mov": { "cur": 9, "max": 9 },
+    "accion": false,
+    "adicional": false,
+    "reaccion": false,
+    "icon": "grerin.webp",
+    "condiciones": ["envenenado"]
+  },
+  {
+    "id": "3",
+    "iniciativa": 12,
+    "nombre": "Ragdahr",
+    "ca": 15,
+    "pv": { "cur": 22, "max": 28, "tmp": 0 },
+    "mov": { "cur": 9, "max": 9 },
+    "accion": false,
+    "adicional": false,
+    "reaccion": false,
+    "icon": "ragdahr.webp",
+    "condiciones": ["miedo", "prone"]
+  },
+  {
+    "id": "4",
+    "iniciativa": 6,
+    "nombre": "Elkyz",
+    "ca": 16,
+    "pv": { "cur": 8, "max": 24, "tmp": 0 },
+    "mov": { "cur": 9, "max": 9 },
+    "accion": false,
+    "adicional": false,
+    "reaccion": false,
+    "icon": "elkyz.webp",
+    "condiciones": ["concentrado"]
+  }
+]

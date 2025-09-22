@@ -1,0 +1,67 @@
+:root{
+  --bg:#0f1115; --panel:#151923; --muted:#7b8191; --text:#e7eaf0; --line:#23293a;
+  --accent:#54a3ff; --accent-2:#70e089; --danger:#ff6b6b;
+}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:12px/1.25 system-ui,Segoe UI,Roboto,Arial,sans-serif;}
+.wrap{padding:6px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 6px 22px rgba(0,0,0,.18);overflow:hidden}
+.head{display:flex;align-items:center;gap:8px;padding:6px 8px;border-bottom:1px solid var(--line)}
+.head h1{font-size:12px;margin:0;color:var(--muted);font-weight:600;letter-spacing:.2px}
+.head .sp{flex:1}
+
+.btn{border:1px solid var(--line);background:#0e1220;border-radius:7px;padding:3px 8px;color:var(--text);cursor:pointer}
+.btn:hover{border-color:#2b3147}
+.btn.danger{border-color:#543; background:#2a0f12}
+
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+thead th{
+  position:sticky;top:0;background:rgba(21,25,35,.9);
+  backdrop-filter:saturate(140%) blur(4px);font-weight:600;color:#b8becc;
+  padding:5px 6px
+}
+th,td{
+  border-bottom:1px dashed var(--line);
+  padding:6px 6px;vertical-align:middle;
+  overflow:visible;text-overflow:clip;white-space:nowrap
+}
+
+/* Anchuras */
+col.cn{width:42px}
+col.ca{width:72px}
+col.pv{width:110px}
+col.ax, col.ad, col.rx{width:76px}
+col.mv{width:100px}
+col.tools{width:160px}
+
+/* avatar */
+.avatar{width:26px;height:26px;border-radius:50%;display:inline-block;overflow:hidden;border:1px solid #2a3147;box-shadow:0 1px 0 rgba(255,255,255,.04) inset}
+.avatar img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* chips */
+.chips{display:flex;gap:4px;flex-wrap:wrap}
+.chip{padding:2px 6px;border-radius:999px;font-size:11px;line-height:1;border:1px solid rgba(255,255,255,.12);user-select:none}
+
+/* toggles */
+.pill{
+  min-width:68px;height:18px;padding:0 8px;border-radius:6px;border:1px solid #2a3147;
+  display:inline-flex;align-items:center;justify-content:center;user-select:none
+}
+.pill.on{background:color-mix(in oklab, var(--accent) 24%, transparent);border-color:color-mix(in oklab, var(--accent) 60%, transparent);color:#dff0ff}
+.pill.off{background:#0c1020;color:#a9b0c3}
+
+/* movimiento */
+.mv{display:inline-flex;align-items:center;gap:4px;font-variant-numeric:tabular-nums}
+.mv .pair{min-width:48px;text-align:right}
+
+/* inputs admin */
+input[type="text"], input[type="number"]{
+  width:80px;background:#0e1220;color:var(--text);border:1px solid var(--line);border-radius:6px;padding:2px 4px
+}
+input.small{width:40px}
+
+/* estado fila */
+tbody tr.active{outline:2px solid var(--accent-2);outline-offset:-2px;background:linear-gradient(90deg, rgba(112,224,137,.12), transparent)}
+tbody tr:hover{background:rgba(255,255,255,.03)}
+
+.muted{color:#9aa3b2}
+
