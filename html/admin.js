@@ -121,6 +121,61 @@ function buildCharDatalist() {
   }
 }
 
+function genId() {
+  return String(Date.now()) + "-" + Math.random().toString(36).slice(2,7);
+}
+
+function normalizeCreature(p) {
+  const q = (typeof structuredClone === "function") ? structuredClone(p) : JSON.parse(JSON.stringify(p || {}));
+  if (!q.id) q.id = genId();
+  q.nombre   = String(q.nombre ?? "Sin nombre");
+  q.icon     = (q.icon ?? q.icono ?? null) || null;
+  q.ini      = Number.isFinite(q.ini) ? Math.round(q.ini) : 0;
+  q.ca       = Math.max(0, Math.round(Number(q.ca) || 0));
+
+  // PV
+  if (typeof q.pv !== "object" || q.pv === null) q.pv = { cur: Number(q.pv) || 0, max: Number(q.pv) || 0 };
+  q.pv.cur = Math.max(0, Math.round(Number(q.pv.cur) || 0));
+  q.pv.max = Math.max(0, Math.round(Number(q.pv.max) || 0));
+  if (q.pv.cur > q.pv.max) q.pv.cur = q.pv.max;
+
+  // Movimiento (admite medios metros)
+  if (typeof q.mov === "number") q.mov = { cur: q.mov, max: q.mov };
+  if (!q.mov || typeof q.mov !== "object") q.mov = { cur: 0, max: 0 };
+  q.mov.max = Math.max(0, roundToHalf(toNumberLocale(q.mov.max)));
+  q.mov.cur = Math.max(0, Math.min(roundToHalf(toNumberLocale(q.mov.cur)), q.mov.max));
+
+  // Acciones / flags
+  q.accion    = !!q.accion;
+  q.adicional = !!q.adicional;
+  q.reaccion  = !!q.reaccion;
+
+  // Condiciones
+  const arr = Array.isArray(q.condiciones) ? q.condiciones : [];
+  q.condiciones = arr.filter(Boolean).map(String);
+
+  // Visibilidad
+  q.visible = (q.visible === false) ? false : true;
+
+  // Recalcular etiquetas automáticas (sangrando/herido/apenas vivo)
+  updateAutoHPConditions(q);
+
+  return q;
+}
+
+function sanitizeImportedState(raw) {
+  // Acepta payload exportado { type:"encounter", state:{...} } o un state directo
+  const payload = (raw && raw.type === "encounter" && raw.state) ? raw.state : raw;
+
+  const next = { activeIdx: 0, party: [] };
+  if (payload && Array.isArray(payload.party)) {
+    next.party = payload.party.map(normalizeCreature);
+    // activeIdx dentro de rango
+    const ai = Number(payload.activeIdx);
+    next.activeIdx = Number.isFinite(ai) ? Math.max(0, Math.min(ai, next.party.length - 1)) : 0;
+  }
+  return next;
+}
 
 // --- Sugerencias de condiciones (autocompletado) ---
 function buildCondDatalist() {
@@ -488,6 +543,34 @@ function exportEncounter() {
 
   downloadJSON(fname, payload);
 }
+
+async function importEncounterFromFile(file) {
+  try {
+    const text = await file.text();
+    const json = JSON.parse(text);
+    const next = sanitizeImportedState(json);
+
+    if (!Array.isArray(next.party) || next.party.length === 0) {
+      alert("El archivo no contiene un encuentro válido (party vacía).");
+      return;
+    }
+
+    // Sustituir estado actual
+    state = next;
+
+    // (Opcional) ordenar por iniciativa si quieres que al importar se respete ranking
+    // sortPartyByIni();
+
+    // Persistir, re-renderizar y emitir a clientes
+    sync();
+    render();
+    broadcastState();
+  } catch (e) {
+    console.error("Import error:", e);
+    alert("No se pudo importar el archivo. ¿Es un JSON válido con el formato exportado?");
+  }
+}
+
 
 // ====== Estado ======
 let state = {
@@ -937,6 +1020,17 @@ document.getElementById("addHiddenBtn").addEventListener("click",(e)=>{
 document.getElementById("exportBtn").addEventListener("click", (e) => {
   e.stopPropagation();
   exportEncounter();
+});
+document.getElementById("importBtn").addEventListener("click", (e) => {
+  e.stopPropagation();
+  const input = document.createElement("input");
+  input.type = "file";
+  input.accept = "application/json,.json";
+  input.addEventListener("change", () => {
+    const file = input.files && input.files[0];
+    if (file) importEncounterFromFile(file);
+  });
+  input.click();
 });
 
 (async function init(){
