@@ -2,17 +2,19 @@
 let awaitingServerState = false;
 let seedTimer = null;
 const SEED_TIMEOUT_MS = 1200;
-const WS_URL = new URLSearchParams(location.search).get("ws") || "ws://localhost:8443";
+const WS_URL = new URLSearchParams(location.search).get("ws") || "wss://jynus.com:8443";
 const TOKEN  = new URLSearchParams(location.search).get("token") || "";
 const COND_URL = "conditions.json";
 const PERSONAJES_URL = "personajes.json";
+const MONSTRUOS_URL  = "monstruos.json";
 
 let CONDITIONS = [];
 let condIndex = { get: () => null, norm: (s) => String(s || "").trim().toLowerCase() };
 
 let PERSONAJES = [];
-let personajesIndex = { get: () => null, norm: (s) => String(s || "").trim().toLowerCase() };
-
+let MONSTRUOS  = [];
+let TEMPLATES  = []; // PERSONAJES + MONSTRUOS juntos para autocompletar
+let templatesIndex = { get: () => null, norm: (s) => String(s || "").trim().toLowerCase() };
 
 function isVisible(p){ return p && p.visible !== false; }
 
@@ -73,8 +75,36 @@ async function loadPersonajes() {
   personajesIndex = { get: (n) => map[norm(n)] || null, norm };
 }
 
+async function loadMonstruos() {
+  // intentamos mostruos.json; si falla, probamos monstruos.json (por si hay typo)
+  async function tryFetch(url) {
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) throw new Error(String(res.status));
+    return res.json();
+  }
+  try {
+    MONSTRUOS = await tryFetch(MONSTRUOS_URL);
+  } catch {
+    try {
+      MONSTRUOS = await tryFetch("monstruos.json");
+    } catch {
+      MONSTRUOS = [];
+    }
+  }
+}
+
+function rebuildTemplatesIndex() {
+  TEMPLATES = [...(PERSONAJES || []), ...(MONSTRUOS || [])];
+  const map = {};
+  const norm = (s) => String(s || "").trim().toLowerCase();
+  for (const c of TEMPLATES) {
+    if (c && c.nombre) map[norm(c.nombre)] = c;
+  }
+  templatesIndex = { get: (n) => map[norm(n)] || null, norm };
+}
+
 function buildCharDatalist() {
-  const names = PERSONAJES.map(p => p.nombre).filter(Boolean)
+  const names = TEMPLATES.map(p => p.nombre).filter(Boolean)
     .sort((a,b)=> a.localeCompare(b, "es", {sensitivity:"base"}));
 
   let dl = document.getElementById("char-suggestions");
@@ -282,15 +312,89 @@ function hasExactDatalistOption(listId, value) {
   return false;
 }
 
+function updateAutoHPConditions(p) {
+  const norm = condIndex.norm;
+  const arr = p.condiciones || (p.condiciones = []);
+
+  // 1) Elimina condiciones automáticas previas, excepto incapacitado o muerto
+  for (let i = arr.length - 1; i >= 0; i--) {
+    const k = norm(arr[i]);
+    if (
+      k === "sangrando" || k === "bleeding" ||
+      k === "herido"    || k === "wounded" ||
+      k === "apenas vivo" || k === "barely standing"
+    ) {
+      arr.splice(i, 1);
+    }
+  }
+
+  // 2) Añade según PV
+  const cur = Number(p?.pv?.cur);
+  const max = Number(p?.pv?.max);
+
+  if (!Number.isFinite(cur) || !Number.isFinite(max) || max <= 0) return;
+
+  if (cur <= 0) {
+    if (!arr.includes("muerto") && !arr.includes("inconsciente")) { arr.push("inconsciente") };
+    arr.push("sangrando");
+  }
+  // "sangrando" si cur <= max/2
+  else if (cur <= max / 2) {
+    arr.push("sangrando");
+
+    if ((cur === 1 && max >= 3) ||
+        ((cur / max) <= 0.1 && max <= 50) ||
+        ((cur / max) <= 0.05)) {
+      arr.push("apenas vivo");
+    }
+  }
+  // "herido" si cur < max (y no entra en sangrando)
+  else if (cur < max) {
+    arr.push("herido");
+  }
+}
+
+function parseNameSuffix(name) {
+  const s = String(name || "").trim();
+  const m = s.match(/^(.*?)(?:\s([A-Z]+))$/); // base + espacio + MAYÚSCULAS
+  if (m) return { base: m[1].trim(), suffix: m[2] };
+  return { base: s, suffix: null };
+}
+
+function nextSuffix(s) {
+  if (!s) return "A";
+  let carry = 1;
+  const arr = s.split("").reverse();
+  for (let i = 0; i < arr.length; i++) {
+    let v = arr[i].charCodeAt(0) - 65 + carry; // 'A'->0
+    if (v >= 26) { arr[i] = "A"; carry = 1; }
+    else { arr[i] = String.fromCharCode(65 + v); carry = 0; break; }
+  }
+  if (carry) arr.push("A");
+  return arr.reverse().join("");
+}
+
+function nextFreeName(base, startSuffix, used) {
+  let suff = startSuffix;
+  // garantiza que siempre hay un sufijo
+  if (!suff) suff = "A";
+  let candidate = `${base} ${suff}`;
+  while (used.has(candidate)) {
+    suff = nextSuffix(suff);
+    candidate = `${base} ${suff}`;
+  }
+  return candidate;
+}
+
 // ====== Estado ======
 let state = {
   activeIdx: 0,
   party: [
-  { id:"1", "nombre": "Grerin Beibalar", "icon": "grerin.webp", "ca": 16, "pv": {"cur":33, "max":33, "tmp":0}, "mov": {"cur":9,"max":9}, accion:false, adicional:false, reaccion:false, condiciones:[]},
-  { id:"2", "nombre": "Elkyz Myrthar", "icon": "elkyz.webp", "ca": 12, "pv": {"cur":34,"max":34, "tmp":0}, "mov": {"cur":9,"max":9}, "accion":false, "adicional":false, "reaccion":false, condiciones:[]},
-  { id:"3", "nombre": "Ragdahr Kindhammer", "icon": "ragdahr.webp", "ca": 16, "pv": {"cur":48, "max":48,"tmp":0}, "mov": {"cur":9,"max":9}, accion:false, adicional:false, reaccion:false, condiciones:[]},
-  { id:"4", "nombre": "Rairish Drechash", "icono": "rairish.webp", "ca": 18, "pv": {"cur": 49, "max":49, "tmp":0}, "mov": {"cur":9,"max":9}, accion:false, adicional:false, reaccion:false, condiciones:[]}
-]
+    { id:"1", nombre:"Swalin Coppermaster", ca:19, pv:{cur:38,max:45}, mov:{cur:9,max:9}, accion:false, adicional:false, reaccion:false, icon:null, condiciones:["concentrado"] },
+    { id:"2", nombre:"Gianmarco Soresi", ca:17, pv:{cur:26,max:33}, mov:{cur:6,max:6}, accion:false, adicional:false, reaccion:false, icon:null, condiciones:["envenenado"] },
+    { id:"3", nombre:"Elara Swiftwind", ca:15, pv:{cur:22,max:28}, mov:{cur:9,max:9}, accion:false, adicional:false, reaccion:false, icon:null, condiciones:["miedo","prone"] },
+    { id:"4", nombre:"Un dragón muy malote", ca:16, pv:{cur:18,max:24}, mov:{cur:7,max:7}, accion:false, adicional:false, reaccion:false, icon:null, condiciones:["escondido"] }
+  ]
 };
 
 // ====== Render ======
@@ -299,14 +403,8 @@ const $ = (sel, ctx=document) => ctx.querySelector(sel);
 function td(text=""){ const c=document.createElement("td"); if(text!==""&&text!==null) c.textContent=text; return c; }
 function btn(t){ const b=document.createElement("button"); b.className="btn"; b.type="button"; b.textContent=t; return b; }
 
-function chips(list, pv, onToggle){
+function chips(list, onToggle){
   const out = Array.isArray(list) ? [...list] : [];
-  if (pv && typeof pv.cur==="number" && typeof pv.max==="number" && pv.max>0){
-    const below = pv.cur < pv.max/2;
-    const has = out.some(x => condIndex.norm(x)==="sangrando" || condIndex.norm(x)==="bleeding");
-    if (below && !has) out.push("sangrando");
-    if (!below && has) for(let i=out.length-1;i>=0;i--){const k=condIndex.norm(out[i]); if(k==="sangrando"||k==="bleeding") out.splice(i,1); }
-  }
   const box=document.createElement("div"); box.className="chips";
   const seen=new Set();
   for(const raw of out){
@@ -315,9 +413,12 @@ function chips(list, pv, onToggle){
     const span=document.createElement("span"); span.className="chip";
     span.textContent = def?.spanish || String(raw);
     paintChip(span, def?.color || "#8b5cf6");
-    if (onToggle && key!=="sangrando" && key!=="bleeding") {
-      span.addEventListener("click",(e)=>{ e.stopPropagation(); onToggle(raw); });
-      span.title = "Click para quitar";
+    if (onToggle &&
+      key!=="sangrando" && key!=="bleeding" &&
+      key!=="herido"    && key!=="wounded" &&
+      key!=="apenas vivo" && key!=="barely standing") {
+        span.addEventListener("click",(e)=>{ e.stopPropagation(); onToggle(raw); });
+        span.title = "Click para quitar";
     }
     box.appendChild(span);
   }
@@ -364,8 +465,8 @@ function render(){
     {
       const ip = makeText(p.nombre || "", (v) => {
         p.nombre = v;
-        // Si coincide con un personaje conocido, aplicar plantilla
-        const tpl = personajesIndex.get(v);
+        // Si coincide con un personaje o monstruo conocido, aplicar plantilla
+        const tpl = templatesIndex.get(v);
         if (tpl) {
           applyCharacterTemplate(p, tpl);
         }
@@ -374,6 +475,7 @@ function render(){
       ip.style.width = "160px";
       tdNom.appendChild(ip);
     }
+    tdNom.classList.add("nm")
 
     const tdCA = td(); {
       const ip = makeNum(p.ca ?? 0, (v) => {
@@ -388,11 +490,13 @@ function render(){
         p.pv.cur = Math.max(0, Math.round(v));
         if (typeof p.pv.max !== "number") p.pv.max = 0;
         if (p.pv.cur > p.pv.max) p.pv.cur = p.pv.max;
+        updateAutoHPConditions(p);
         sync(); render();
       });
       const max = makeNum(p.pv.max ?? 0, (v) => {
         p.pv.max = Math.max(0, Math.round(v));
         if (p.pv.cur > p.pv.max) p.pv.cur = p.pv.max;
+        updateAutoHPConditions(p);
         sync(); render();
       });
       max.style.marginLeft = "6px";
@@ -423,7 +527,7 @@ function render(){
       tdM.appendChild(box);
     }
 
-    const tdC=td(); tdC.appendChild(chips(p.condiciones||[], p.pv, (name)=>{
+    const tdC=td(); tdC.appendChild(chips(p.condiciones||[], (name)=>{
       const k=condIndex.norm(name);
       const arr=p.condiciones||(p.condiciones=[]);
       const i = arr.findIndex(x=>condIndex.norm(x)===k);
@@ -517,11 +621,66 @@ function render(){
       }
     });
 
+    // Botón duplicar
+    const dupBtn = btn("⧉");
+    dupBtn.classList.add("small");
+    dupBtn.title = "Duplicar";
+
+    dupBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      const curActiveId = state.party[state.activeIdx]?.id;
+
+      // deep clone + new id
+      const clone = (typeof structuredClone === "function")
+        ? structuredClone(p)
+        : JSON.parse(JSON.stringify(p));
+      clone.id = String(Date.now()) + "-" + Math.random().toString(36).slice(2,7);
+
+      // naming logic
+      const used = new Set(state.party.map(x => x.nombre));
+      const { base, suffix } = parseNameSuffix(p.nombre);
+
+      let startForClone;
+
+      if (!suffix) {
+        // Only case we may rename the original → try "A"
+        const aName = `${base} A`;
+        if (!used.has(aName)) {
+        // rename original to "<base> A"
+        used.delete(p.nombre);
+        p.nombre = aName;
+        used.add(p.nombre);
+        startForClone = "B";              // clone starts at B
+        } else {
+        // can't rename original; clone starts searching from A
+        startForClone = "A";
+        }
+      } else {
+        // Original already has suffix → never rename it
+        startForClone = nextSuffix(suffix); // clone starts at next letter
+      }
+
+      // Pick first free "<base> <suffix>"
+      clone.nombre = nextFreeName(base, startForClone, used);
+
+      // insert just below
+      state.party.splice(idx + 1, 0, clone);
+
+      // keep current selection
+      if (curActiveId) {
+        const pos = state.party.findIndex(x => x.id === curActiveId);
+        if (pos >= 0) state.activeIdx = pos;
+      }
+
+      sync(); render();
+    });
+
     const delBtn=btn("🗑"); delBtn.classList.add("danger"); delBtn.title="Eliminar personaje";
     delBtn.addEventListener("click",(e)=>{ e.stopPropagation(); state.party.splice(idx,1);
       if(state.activeIdx>=state.party.length) state.activeIdx=Math.max(0,state.party.length-1); sync(); render(); });
 
-    tdTools.append(eyeBtn, document.createTextNode(" "), addInput, addBtn, document.createTextNode(" "), delBtn);
+    tdTools.append(eyeBtn, document.createTextNode(" "), addInput, addBtn, dupBtn, document.createTextNode(" "), delBtn);
 
     tr.append(tdIni,tdIcon,tdNom,tdCA,tdPV,tdA,tdB,tdR,tdM,tdC,tdTools);
     rows.appendChild(tr);
@@ -566,6 +725,7 @@ function applyCharacterTemplate(p, tpl) {
   p.adicional = false;
   p.reaccion = false;
   p.condiciones = [];
+  updateAutoHPConditions(p);
 }
 
 
@@ -573,6 +733,7 @@ function applyCharacterTemplate(p, tpl) {
 let ws, retry=0, sendTimer=null;
 
 function broadcastState(){
+  for (const p of state.party) updateAutoHPConditions(p);
   const msg = { type:"state", state };
   try{ ws && ws.readyState===1 && ws.send(JSON.stringify(msg)); }catch{}
 }
@@ -670,6 +831,8 @@ document.getElementById("addHiddenBtn").addEventListener("click",(e)=>{
   buildCondDatalist();
 
   await loadPersonajes();
+  await loadMonstruos();
+  rebuildTemplatesIndex();
   buildCharDatalist();
 
   sortPartyByIni();

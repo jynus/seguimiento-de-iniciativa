@@ -25,14 +25,20 @@ th,td{
   overflow:visible;text-overflow:clip;white-space:nowrap
 }
 
+th.nm, td.nm {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 /* Anchuras */
 col.ini{width:42px}
 col.cn{width:42px}
 col.ca{width:42px}
 col.pv{width:85px}
 col.ax, col.ad, col.rx{width:86px}
-col.mv{width:50px}
-col.tools{width:160px}
+col.mv{width:30px}
+col.tools{width:200px}
 
 /* avatar */
 .avatar{width:26px;height:26px;border-radius:50%;display:inline-block;overflow:hidden;border:1px solid #2a3147;box-shadow:0 1px 0 rgba(255,255,255,.04) inset}
@@ -51,9 +57,21 @@ col.tools{width:160px}
 .pill.off{background:#0c1020;color:#a9b0c3}
 
 /* movimiento */
-.mv{display:inline-flex;align-items:center;gap:4px;font-variant-numeric:tabular-nums}
-.mv .pair{min-width:42px;text-align:right}
+.mv{display:inline-flex;align-items:left;gap:4px;font-variant-numeric:tabular-nums}
+/* .mv .pair{min-width:20px;text-align:right} */
+td .mv {
+  display: inline-flex;       /* coloca cur / max / "m" en línea compacta */
+  align-items: center;
+  gap: 4px;                   /* separación mínima */
+  white-space: nowrap;        /* evita saltos de línea */
+}
 
+td .mv input[type="number"] {
+  width: 30px;               /* cabe 12.5 sin sobrar mucho */
+  min-width: 0;
+  padding: 2px 4px;
+  box-sizing: border-box;
+}
 /* inputs admin */
 input[type="text"], input[type="number"]{
   width:24px;background:#0e1220;color:var(--text);border:1px solid var(--line);border-radius:6px;padding:2px 4px

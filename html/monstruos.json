@@ -1,0 +1,9 @@
+[
+  {
+    "nombre": "Goblin Minion",
+    "icon": "goblin_minion.webp",
+    "ca": 12,
+    "pv": 7,
+    "mov": 9
+  }
+]

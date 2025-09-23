@@ -52,7 +52,7 @@ function svgAvatar(initials,bg="#60a5fa",fg="#0f1115"){
 function fmtHalf(n) {
   return Number.isFinite(n)
     ? (Number.isInteger(n) ? String(n) : String(n).replace(/\.0$/, ""))
-    : "—";
+    : "-";
 }
 
 // ====== Estado ======
@@ -62,20 +62,14 @@ let state = { party: [], activeIdx: 0 };
 const rows = document.getElementById("rows");
 function td(text=""){ const c=document.createElement("td"); if(text!==""&&text!==null) c.textContent=text; return c; }
 
-function chips(list, pv){
-  const out = Array.isArray(list) ? [...list] : [];
-  if (pv && typeof pv.cur==="number" && typeof pv.max==="number" && pv.max>0){
-    const below = pv.cur < pv.max/2;
-    const has = out.some(x => condIndex.norm(x)==="sangrando" || condIndex.norm(x)==="bleeding");
-    if (below && !has) out.push("sangrando");
-    if (!below && has) for(let i=out.length-1;i>=0;i--){const k=condIndex.norm(out[i]); if(k==="sangrando"||k==="bleeding") out.splice(i,1); }
-  }
-  const box = document.createElement("div"); box.className="chips";
-  const seen=new Set();
-  for (const raw of out){
-    const key = condIndex.norm(raw); if (seen.has(key)) continue; seen.add(key);
+function chips(list) {
+  const box = document.createElement("div"); box.className = "chips";
+  const seen = new Set();
+  for (const raw of (list || [])) {
+    const key = condIndex.norm(raw);
+    if (seen.has(key)) continue; seen.add(key);
     const def = condIndex.get(raw);
-    const span = document.createElement("span"); span.className="chip";
+    const span = document.createElement("span"); span.className = "chip";
     span.textContent = def?.spanish || String(raw);
     paintChip(span, def?.color || "#8b5cf6");
     box.appendChild(span);
@@ -87,7 +81,12 @@ function render(){
   rows.innerHTML = "";
   const list = (state.party || []).filter(p => p.visible !== false);
   if (!list.length){
-    const tr=document.createElement("tr"); const td0=td("Sin datos"); td0.colSpan=9; td0.className="muted"; tr.appendChild(td0); rows.appendChild(tr);
+    const tr=document.createElement("tr");
+    const td0=td("Sin datos");
+    td0.colSpan=7;
+    td0.className="muted";
+    tr.appendChild(td0);
+    rows.appendChild(tr);
     return;
   }
   list.forEach((p,idx)=>{
@@ -102,8 +101,6 @@ function render(){
 
     const tdIcon=td(); tdIcon.innerHTML=`<span class="avatar"><img alt="" src="${iconSrc}" /></span>`;
     const tdNom = td(p.nombre ?? "—");
-    const tdCA  = td(p.ca ?? "—");
-    const tdPV  = td(`${p.pv.cur ?? "—"}/${p.pv.max ?? "—"}`);
     const tdA=td(); tdA.innerHTML=`<span class="pill ${p.accion?'on':'off'}">${p.accion?'Usada':'Disponible'}</span>`;
     const tdB=td(); tdB.innerHTML=`<span class="pill ${p.adicional?'on':'off'}">${p.adicional?'Usada':'Disponible'}</span>`;
     const tdR=td(); tdR.innerHTML=`<span class="pill ${p.reaccion?'on':'off'}">${p.reaccion?'Usada':'Disponible'}</span>`;
@@ -114,9 +111,9 @@ function render(){
       box.append(pr,document.createTextNode(" m"));
       tdM.appendChild(box);
     }
-    const tdC=td(); tdC.appendChild(chips(p.condiciones||[], p.pv));
+    const tdC=td(); tdC.appendChild(chips(p.condiciones||[]));
 
-    tr.append(tdIcon,tdNom,tdCA,tdPV,tdA,tdB,tdR,tdM,tdC);
+    tr.append(tdIcon,tdNom,tdA,tdB,tdR,tdM,tdC);
     rows.appendChild(tr);
   });
 }
