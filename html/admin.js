@@ -416,11 +416,11 @@ function showHPPopover(anchorEl, p) {
   const pop = document.createElement('div');
   pop.className = 'hp-popover';
 
-  const btnDmg = btn("🗡️ Aplicar daño");
+  const btnDmg = btn("🗡️ Aplicar daño"); btnDmg.classList.add("dmg");
   const amt = document.createElement("input");
   amt.type = "number"; amt.step = "1"; amt.min = "0"; amt.value = "1";
   amt.className = "small no-spin"; amt.inputMode = "numeric";
-  const btnHeal = btn("❤️ Curar");
+  const btnHeal = btn("❤️ Curar"); btnHeal.classList.add("heal");
 
   pop.append(btnDmg, amt, btnHeal);
   document.body.appendChild(pop);
