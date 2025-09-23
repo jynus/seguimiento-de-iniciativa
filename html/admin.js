@@ -354,6 +354,74 @@ function updateAutoHPConditions(p) {
   }
 }
 
+function showHPPopover(anchorEl, p) {
+  // Cierra popovers previos
+  document.querySelectorAll('.hp-popover').forEach(el => el.remove());
+
+  const pop = document.createElement('div');
+  pop.className = 'hp-popover';
+
+  const btnDmg = btn("🗡️ Aplicar daño");
+  const amt = document.createElement("input");
+  amt.type = "number"; amt.step = "1"; amt.min = "0"; amt.value = "1";
+  amt.className = "small no-spin"; amt.inputMode = "numeric";
+  const btnHeal = btn("❤️ Curar");
+
+  pop.append(btnDmg, amt, btnHeal);
+  document.body.appendChild(pop);
+
+  // Posicionar bajo el input
+  const rect = anchorEl.getBoundingClientRect();
+  const margin = 6;
+  const clampPos = (n, min, max) => Math.max(min, Math.min(max, n));
+  pop.style.left = `${rect.left + window.scrollX}px`;
+  pop.style.top  = `${rect.bottom + window.scrollY + margin}px`;
+  const w = pop.offsetWidth || 180;
+  const maxLeft = window.scrollX + window.innerWidth - w - 8;
+  pop.style.left = `${clampPos(rect.left + window.scrollX, window.scrollX + 8, maxLeft)}px`;
+
+  const getAmt = () => {
+    const v = toNumberLocale(amt.value);
+    return Number.isFinite(v) ? Math.max(0, Math.floor(v)) : 0;
+  };
+
+  const applyAndClose = () => {
+    document.removeEventListener('pointerdown', onDocDown, true);
+    document.removeEventListener('keydown', onKey);
+    pop.remove();
+  };
+
+  // ⚠️ Obtén SIEMPRE el objeto vivo por id (por si state fue reemplazado)
+  const getLive = () => state.party.find(x => x.id === p.id) || p;
+
+  const applyDelta = (delta) => {
+    const target = getLive();
+    if (!target.pv || typeof target.pv !== "object") target.pv = { cur: 0, max: 0 };
+    const max = Number(target.pv.max) || 0;
+    let cur = Number(target.pv.cur) || 0;
+    cur = Math.max(0, Math.min(cur + delta, max));
+    target.pv.cur = cur;
+    updateAutoHPConditions(target);
+    sync();
+    render();
+    applyAndClose();
+  };
+
+  btnDmg.addEventListener("click", (e) => { e.stopPropagation(); applyDelta(-getAmt()); });
+  btnHeal.addEventListener("click", (e) => { e.stopPropagation(); applyDelta(+getAmt()); });
+
+  const onDocDown = (ev) => {
+    if (pop.contains(ev.target) || anchorEl.contains(ev.target)) return;
+    applyAndClose();
+  };
+  const onKey = (ev) => { if (ev.key === "Escape") applyAndClose(); };
+
+  setTimeout(() => document.addEventListener('pointerdown', onDocDown, true), 0);
+  document.addEventListener('keydown', onKey);
+
+  amt.select();
+}
+
 function parseNameSuffix(name) {
   const s = String(name || "").trim();
   const m = s.match(/^(.*?)(?:\s([A-Z]+))$/); // base + espacio + MAYÚSCULAS
@@ -493,6 +561,13 @@ function render(){
         updateAutoHPConditions(p);
         sync(); render();
       });
+
+      // Mostrar popover de daño/curación al pulsar el campo PV cur
+      cur.addEventListener("click", (e) => {
+        e.stopPropagation();
+        showHPPopover(cur, p);
+      });
+
       const max = makeNum(p.pv.max ?? 0, (v) => {
         p.pv.max = Math.max(0, Math.round(v));
         if (p.pv.cur > p.pv.max) p.pv.cur = p.pv.max;
@@ -509,13 +584,13 @@ function render(){
 
     const tdM = td(); {
       const cur = makeNum(p.mov.cur ?? 0, (v) => {
-        p.mov.cur = Math.max(0, roundToHalf(v));
+        const val = Math.max(0, roundToHalf(v));
         if (typeof p.mov.max !== "number") p.mov.max = 0;
         p.mov.cur = Math.min(val, p.mov.max);
         sync(); render();
       });
       const max = makeNum(p.mov.max ?? 0, (v) => {
-        p.mov.max = Math.max(0, Math.roundToHalf(v));
+        p.mov.max = Math.max(0, roundToHalf(v));
         if (p.mov.cur > p.mov.max) p.mov.cur = p.mov.max;
         sync(); render();
       });

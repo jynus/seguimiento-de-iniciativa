@@ -109,3 +109,39 @@ tbody tr.hidden-for-clients{
 /* tiny emoji buttons look better slightly tighter */
 .btn.emoji{ padding: 2px 6px; font-size: 14px; line-height: 1; }
 
+/* Popover para ajustar PV (aparece bajo PV cur) */
+.hp-popover {
+  position: absolute;
+  z-index: 9999;
+  min-width: 160px;
+  max-width: 220px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(20, 24, 32, .95);
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  backdrop-filter: blur(6px);
+}
+.hp-popover .btn { width: 100%; margin: 4px 0; }
+.hp-popover input[type="number"] {
+  width: 100%;
+  min-width: 0;
+  text-align: center;
+  padding: 4px 6px;
+  box-sizing: border-box;
+}
+
+/* Estilos específicos del popover de PV */
+.hp-popover .btn.dmg {
+  background: #7f1d1d;
+  border-color: #b91c1c;
+  color: #fff;
+}
+.hp-popover .btn.dmg:hover { background: #991b1b; }
+
+.hp-popover .btn.heal {
+  background: #064e3b;
+  border-color: #10b981;
+  color: #fff;
+}
+.hp-popover .btn.heal:hover { background: #065f46; }
