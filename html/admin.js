@@ -454,6 +454,41 @@ function nextFreeName(base, startSuffix, used) {
   return candidate;
 }
 
+function downloadJSON(filename, obj) {
+  const blob = new Blob([JSON.stringify(obj, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => { URL.revokeObjectURL(url); a.remove(); }, 0);
+}
+
+function exportEncounter() {
+  // Clon “seguro” del estado actual
+  const copy = (typeof structuredClone === "function")
+    ? structuredClone(state)
+    : JSON.parse(JSON.stringify(state));
+
+  // Asegura condiciones automáticas coherentes antes de exportar
+  for (const p of copy.party) updateAutoHPConditions(p);
+
+  const payload = {
+    type: "encounter",
+    version: 1,
+    exportedAt: new Date().toISOString(),
+    state: copy
+  };
+
+  // Nombre de archivo: encuentro-YYYYMMDD-HHMMSS.json
+  const d = new Date();
+  const pad = (n) => String(n).padStart(2, "0");
+  const fname = `encuentro-${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}-${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}.json`;
+
+  downloadJSON(fname, payload);
+}
+
 // ====== Estado ======
 let state = {
   activeIdx: 0,
@@ -898,6 +933,10 @@ document.getElementById("addHiddenBtn").addEventListener("click",(e)=>{
     visible: false                 // ← crea oculta por defecto
   });
   sync(); render();
+});
+document.getElementById("exportBtn").addEventListener("click", (e) => {
+  e.stopPropagation();
+  exportEncounter();
 });
 
 (async function init(){
