@@ -99,7 +99,10 @@ function render(){
     const initials = p.nombre?.split(/\s+/).map(w=>w[0]).join("") || "??";
     const iconSrc = p.icon || svgAvatar(initials);
 
-    const tdIcon=td(); tdIcon.innerHTML=`<span class="avatar"><img alt="" src="${iconSrc}" /></span>`;
+    const tdIcon = td();
+    const fac = (p.tipo === "monstruo") ? (p.faccion || "enemigo") : "";
+    tdIcon.innerHTML = `<span class="avatar ${fac}"><img alt="" src="${iconSrc}" /></span>`;
+
     const tdNom = td(p.nombre ?? "—");
     const tdA=td(); tdA.innerHTML=`<span class="pill ${p.accion?'on':'off'}">${p.accion?'Usada':'Disponible'}</span>`;
     const tdB=td(); tdB.innerHTML=`<span class="pill ${p.adicional?'on':'off'}">${p.adicional?'Usada':'Disponible'}</span>`;

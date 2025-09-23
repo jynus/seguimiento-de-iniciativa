@@ -67,6 +67,8 @@ async function loadPersonajes() {
   } catch (_) {
     PERSONAJES = [];
   }
+  PERSONAJES.forEach(t => { t.tipo = "pj"; });
+
   const map = {};
   const norm = (s) => String(s || "").trim().toLowerCase();
   for (const c of PERSONAJES) {
@@ -91,6 +93,7 @@ async function loadMonstruos() {
       MONSTRUOS = [];
     }
   }
+  MONSTRUOS.forEach(t => { t.tipo = "monstruo"; if (!t.faccion) t.faccion = "enemigo"; });
 }
 
 function rebuildTemplatesIndex() {
@@ -132,6 +135,14 @@ function normalizeCreature(p) {
   q.icon     = (q.icon ?? q.icono ?? null) || null;
   q.ini      = Number.isFinite(q.ini) ? Math.round(q.ini) : 0;
   q.ca       = Math.max(0, Math.round(Number(q.ca) || 0));
+
+  // Tipo / facción
+  q.tipo = (q.tipo === "monstruo") ? "monstruo" : "pj";
+  if (q.tipo === "monstruo") {
+    q.faccion = (q.faccion === "aliado" || q.faccion === "neutral") ? q.faccion : "enemigo";
+  } else {
+    delete q.faccion;
+  }
 
   // PV
   if (typeof q.pv !== "object" || q.pv === null) q.pv = { cur: Number(q.pv) || 0, max: Number(q.pv) || 0 };
@@ -645,7 +656,23 @@ function render(){
       tdIni.appendChild(ip);
     }
 
-    const tdIcon=td(); tdIcon.innerHTML=`<span class="avatar"><img alt="" src="${iconSrc}" /></span>`;
+    const tdIcon = td();
+    const avatar = document.createElement("span");
+    const fac = (p.tipo === "monstruo") ? (p.faccion || "enemigo") : "";
+    avatar.className = `avatar ${fac}`;
+    avatar.innerHTML = `<img alt="" src="${iconSrc}" />`;
+    if (p.tipo === "monstruo") {
+      avatar.title = `Facción: ${p.faccion || "enemigo"} (click para cambiar)`;
+      avatar.style.cursor = "pointer";
+      avatar.addEventListener("click", (e) => {
+        e.stopPropagation();
+        p.faccion = (p.faccion === "enemigo") ? "neutral"
+                  : (p.faccion === "neutral") ? "aliado"
+                  : "enemigo";
+        sync(); render(); 
+      });
+    }
+    tdIcon.appendChild(avatar);
 
     const tdNom=td();
     {
@@ -798,7 +825,7 @@ function render(){
       }
     });
 
-    tr.addEventListener("click",(e)=>{ if(e.target.closest("input,button,.chip")) return; setActiveIdx(idx); });
+    tr.addEventListener("click",(e)=>{ if(e.target.closest("input,button,.chip,.avatar")) return; setActiveIdx(idx); });
     addInput.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
         e.preventDefault();
@@ -912,7 +939,14 @@ function applyCharacterTemplate(p, tpl) {
     p.mov.max = Math.max(0, roundToHalf(maxMov));
     p.mov.cur = p.mov.max; // al elegirlo, cur = max
   }
-
+  // Tipo y facción por origen de la plantilla
+  if (tpl.tipo === "pj") {
+    p.tipo = "pj";
+    delete p.faccion; // no aplica a PJs
+  } else {
+    p.tipo = "monstruo";
+    if (!p.faccion) p.faccion = tpl.faccion || "enemigo";
+  }
   // Reset de acciones y condiciones por defecto
   p.accion = false;
   p.adicional = false;
@@ -1003,14 +1037,14 @@ document.getElementById("broadcastBtn").addEventListener("click",(e)=>{ e.stopPr
 document.getElementById("addBtn").addEventListener("click",(e)=>{
   e.stopPropagation();
   const id=String(Date.now());
-  state.party.push({ id, nombre:"Nuevo", ini:0, ca:10, pv:{cur:10,max:10}, mov:{cur:9,max:9}, accion:false, adicional:false, reaccion:false, icon:null, condiciones:[] });
+  state.party.push({ id, tipo:"monstruo", nombre:"Nuevo", ini:0, ca:10, pv:{cur:10,max:10}, mov:{cur:9,max:9}, accion:false, adicional:false, reaccion:false, icon:null, condiciones:[] });
   sync(); render();
 });
 document.getElementById("addHiddenBtn").addEventListener("click",(e)=>{
   e.stopPropagation();
   const id = String(Date.now());
   state.party.push({
-    id, nombre:"(Oculto)", ini:0, ca:10, pv:{cur:10,max:10}, mov:{cur:9,max:9},
+    id, nombre:"(Oculto)", tipo:"monstruo", ini:0, ca:10, pv:{cur:10,max:10}, mov:{cur:9,max:9},
     accion:false, adicional:false, reaccion:false, icon:null,
     condiciones:[],
     visible: false                 // ← crea oculta por defecto
