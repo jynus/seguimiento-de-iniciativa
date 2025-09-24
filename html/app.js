@@ -100,8 +100,23 @@ function render(){
     const iconSrc = p.icon || svgAvatar(initials);
 
     const tdIcon = td();
-    const fac = (p.tipo === "monstruo") ? (p.faccion || "enemigo") : "";
-    tdIcon.innerHTML = `<span class="avatar ${fac}"><img alt="" src="${iconSrc}" /></span>`;
+    {
+      const fac = (p.tipo === "monstruo") ? (p.faccion || "enemigo") : "";
+      const avatar = document.createElement("span");
+      avatar.className = `avatar ${fac}`;
+
+      const img = document.createElement("img");
+      img.alt = "";
+      const initials = p.nombre?.split(/\s+/).map(w => w[0]).join("") || "??";
+      if (p.icon && String(p.icon).trim() !== "") {
+        const folder = (p.tipo === "pj") ? "character_images" : "monster_images";
+        img.src = `${folder}/${p.icon}`;
+      } else {
+        img.src = svgAvatar(initials);
+      }
+      avatar.appendChild(img);
+      tdIcon.appendChild(avatar);
+    }
 
     const tdNom = td(p.nombre ?? "—");
     const tdA=td(); tdA.innerHTML=`<span class="pill ${p.accion?'on':'off'}">${p.accion?'Usada':'Disponible'}</span>`;

@@ -657,22 +657,35 @@ function render(){
     }
 
     const tdIcon = td();
-    const avatar = document.createElement("span");
-    const fac = (p.tipo === "monstruo") ? (p.faccion || "enemigo") : "";
-    avatar.className = `avatar ${fac}`;
-    avatar.innerHTML = `<img alt="" src="${iconSrc}" />`;
-    if (p.tipo === "monstruo") {
-      avatar.title = `Facción: ${p.faccion || "enemigo"} (click para cambiar)`;
-      avatar.style.cursor = "pointer";
-      avatar.addEventListener("click", (e) => {
-        e.stopPropagation();
-        p.faccion = (p.faccion === "enemigo") ? "neutral"
-                  : (p.faccion === "neutral") ? "aliado"
-                  : "enemigo";
-        sync(); render(); 
-      });
+    {
+      const avatar = document.createElement("span");
+      const fac = (p.tipo === "monstruo") ? (p.faccion || "enemigo") : "";
+      avatar.className = `avatar ${fac}`;
+
+      const img = document.createElement("img");
+      img.alt = "";
+      const initials = p.nombre?.split(/\s+/).map(w => w[0]).join("") || "??";
+      if (p.icon && String(p.icon).trim() !== "") {
+        const folder = (p.tipo === "pj") ? "character_images" : "monster_images";
+        img.src = `${folder}/${p.icon}`;
+      } else {
+        img.src = svgAvatar(initials);
+      }
+      avatar.appendChild(img);
+
+      if (p.tipo === "monstruo") {
+        avatar.title = `Facción: ${p.faccion || "enemigo"} (click para cambiar)`;
+        avatar.style.cursor = "pointer";
+        avatar.addEventListener("click", (e) => {
+          e.stopPropagation();
+          p.faccion = (p.faccion === "enemigo") ? "neutral"
+                    : (p.faccion === "neutral") ? "aliado"
+                    : "enemigo";
+          sync(); render();
+        });
+      }
+      tdIcon.appendChild(avatar);
     }
-    tdIcon.appendChild(avatar);
 
     const tdNom=td();
     {

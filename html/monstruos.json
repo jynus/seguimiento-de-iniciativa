@@ -1,9 +1,3523 @@
 [
   {
+    "nombre": "Aarakocra Aeromancer",
+    "icon": "638741963666292548.jpeg",
+    "ca": 16,
+    "pv": 66,
+    "mov": 6
+  },
+  {
+    "nombre": "Aarakocra Skirmisher",
+    "icon": "638741963673024642.jpeg",
+    "ca": 12,
+    "pv": 11,
+    "mov": 6
+  },
+  {
+    "nombre": "Aberrant Cultist",
+    "icon": "638741963677700467.jpeg",
+    "ca": 14,
+    "pv": 137,
+    "mov": 9
+  },
+  {
+    "nombre": "Aboleth",
+    "icon": "638741963680684340.jpeg",
+    "ca": 17,
+    "pv": 150,
+    "mov": 3
+  },
+  {
+    "nombre": "Abominable Yeti",
+    "icon": "638741963683491120.jpeg",
+    "ca": 15,
+    "pv": 137,
+    "mov": 12
+  },
+  {
+    "nombre": "Adult Black Dragon",
+    "icon": "638741963687079989.jpeg",
+    "ca": 19,
+    "pv": 195,
+    "mov": 12
+  },
+  {
+    "nombre": "Adult Blue Dragon",
+    "icon": "638741963690979073.jpeg",
+    "ca": 19,
+    "pv": 212,
+    "mov": 12
+  },
+  {
+    "nombre": "Adult Brass Dragon",
+    "icon": "638741963694123579.jpeg",
+    "ca": 18,
+    "pv": 172,
+    "mov": 12
+  },
+  {
+    "nombre": "Adult Bronze Dragon",
+    "icon": "638742881073875811.jpeg",
+    "ca": 18,
+    "pv": 212,
+    "mov": 12
+  },
+  {
+    "nombre": "Adult Copper Dragon",
+    "icon": "638741963697436931.jpeg",
+    "ca": 18,
+    "pv": 184,
+    "mov": 12
+  },
+  {
+    "nombre": "Adult Gold Dragon",
+    "icon": "638741963700420069.jpeg",
+    "ca": 19,
+    "pv": 243,
+    "mov": 12
+  },
+  {
+    "nombre": "Adult Green Dragon",
+    "icon": "638741963703227116.jpeg",
+    "ca": 19,
+    "pv": 207,
+    "mov": 12
+  },
+  {
+    "nombre": "Adult Red Dragon",
+    "icon": "638741963705569403.jpeg",
+    "ca": 19,
+    "pv": 256,
+    "mov": 12
+  },
+  {
+    "nombre": "Adult Silver Dragon",
+    "icon": "638741963708375626.jpeg",
+    "ca": 19,
+    "pv": 216,
+    "mov": 12
+  },
+  {
+    "nombre": "Adult White Dragon",
+    "icon": "638741963711183153.jpeg",
+    "ca": 18,
+    "pv": 200,
+    "mov": 12
+  },
+  {
+    "nombre": "Air Elemental",
+    "icon": "638741963714305126.jpeg",
+    "ca": 15,
+    "pv": 90,
+    "mov": 3
+  },
+  {
+    "nombre": "Allosaurus",
+    "icon": "638741963717916049.jpeg",
+    "ca": 13,
+    "pv": 51,
+    "mov": 18
+  },
+  {
+    "nombre": "Ancient Black Dragon",
+    "icon": "638741963721345560.jpeg",
+    "ca": 22,
+    "pv": 367,
+    "mov": 12
+  },
+  {
+    "nombre": "Ancient Blue Dragon",
+    "icon": "638741963724505473.jpeg",
+    "ca": 22,
+    "pv": 481,
+    "mov": 12
+  },
+  {
+    "nombre": "Ancient Brass Dragon",
+    "icon": "638741963727940464.jpeg",
+    "ca": 20,
+    "pv": 332,
+    "mov": 12
+  },
+  {
+    "nombre": "Ancient Bronze Dragon",
+    "icon": "638741963731057058.jpeg",
+    "ca": 22,
+    "pv": 444,
+    "mov": 12
+  },
+  {
+    "nombre": "Ancient Copper Dragon",
+    "icon": "638741963734955346.jpeg",
+    "ca": 21,
+    "pv": 367,
+    "mov": 12
+  },
+  {
+    "nombre": "Ancient Gold Dragon",
+    "icon": "638741963738080476.jpeg",
+    "ca": 22,
+    "pv": 546,
+    "mov": 12
+  },
+  {
+    "nombre": "Ancient Green Dragon",
+    "icon": "638741963740573404.jpeg",
+    "ca": 21,
+    "pv": 402,
+    "mov": 12
+  },
+  {
+    "nombre": "Ancient Red Dragon",
+    "icon": "638741963743243208.jpeg",
+    "ca": 22,
+    "pv": 507,
+    "mov": 12
+  },
+  {
+    "nombre": "Ancient Silver Dragon",
+    "icon": "638741963745899548.jpeg",
+    "ca": 22,
+    "pv": 468,
+    "mov": 12
+  },
+  {
+    "nombre": "Ancient White Dragon",
+    "icon": "638741963748587371.jpeg",
+    "ca": 20,
+    "pv": 333,
+    "mov": 12
+  },
+  {
+    "nombre": "Animal Lord",
+    "icon": "638741963757971016.jpeg",
+    "ca": 19,
+    "pv": 323,
+    "mov": 18
+  },
+  {
+    "nombre": "Animated Armor",
+    "icon": "638741963761244007.jpeg",
+    "ca": 18,
+    "pv": 33,
+    "mov": 8
+  },
+  {
+    "nombre": "Animated Broom",
+    "icon": "638741963763624159.jpeg",
+    "ca": 15,
+    "pv": 14,
+    "mov": 2
+  },
+  {
+    "nombre": "Animated Flying Sword",
+    "icon": "638742151345014354.jpeg",
+    "ca": 17,
+    "pv": 14,
+    "mov": 2
+  },
+  {
+    "nombre": "Animated Rug of Smothering",
+    "icon": "638741963768617807.jpeg",
+    "ca": 12,
+    "pv": 27,
+    "mov": 3
+  },
+  {
+    "nombre": "Ankheg",
+    "icon": "638741963771463383.jpeg",
+    "ca": 14,
+    "pv": 45,
+    "mov": 9
+  },
+  {
+    "nombre": "Ankylosaurus",
+    "icon": "638742152318979105.jpeg",
+    "ca": 15,
+    "pv": 68,
+    "mov": 9
+  },
+  {
+    "nombre": "Ape",
+    "icon": "638607408671951647.jpeg",
+    "ca": 12,
+    "pv": 19,
+    "mov": 9
+  },
+  {
+    "nombre": "Arcanaloth",
+    "icon": "638741963777236436.jpeg",
+    "ca": 18,
+    "pv": 175,
+    "mov": 9
+  },
+  {
+    "nombre": "Arch-hag",
+    "icon": "638741963779266009.jpeg",
+    "ca": 20,
+    "pv": 333,
+    "mov": 12
+  },
+  {
+    "nombre": "Archelon",
+    "icon": "638742153406085942.jpeg",
+    "ca": 17,
+    "pv": 90,
+    "mov": 6
+  },
+  {
+    "nombre": "Archmage",
+    "icon": "638741963784419881.jpeg",
+    "ca": 17,
+    "pv": 170,
+    "mov": 9
+  },
+  {
+    "nombre": "Archpriest",
+    "icon": "638741963787088978.jpeg",
+    "ca": 16,
+    "pv": 240,
+    "mov": 9
+  },
+  {
+    "nombre": "Assassin",
+    "icon": "638741963788955436.jpeg",
+    "ca": 16,
+    "pv": 97,
+    "mov": 9
+  },
+  {
+    "nombre": "Awakened Shrub",
+    "icon": "638741963792080324.jpeg",
+    "ca": 9,
+    "pv": 10,
+    "mov": 6
+  },
+  {
+    "nombre": "Awakened Tree",
+    "icon": "638741963794903465.jpeg",
+    "ca": 13,
+    "pv": 59,
+    "mov": 6
+  },
+  {
+    "nombre": "Axe Beak",
+    "icon": "638741963798023376.jpeg",
+    "ca": 11,
+    "pv": 19,
+    "mov": 15
+  },
+  {
+    "nombre": "Azer Pyromancer",
+    "icon": "638741963801477304.jpeg",
+    "ca": 18,
+    "pv": 97,
+    "mov": 9
+  },
+  {
+    "nombre": "Azer Sentinel",
+    "icon": "638741963804597702.jpeg",
+    "ca": 17,
+    "pv": 39,
+    "mov": 9
+  },
+  {
+    "nombre": "Baboon",
+    "icon": "638742154065775180.jpeg",
+    "ca": 12,
+    "pv": 3,
+    "mov": 9
+  },
+  {
+    "nombre": "Badger",
+    "icon": "638607409155512331.jpeg",
+    "ca": 11,
+    "pv": 5,
+    "mov": 6
+  },
+  {
+    "nombre": "Balor",
+    "icon": "638741963809295500.jpeg",
+    "ca": 19,
+    "pv": 287,
+    "mov": 12
+  },
+  {
+    "nombre": "Bandit",
+    "icon": "638742155708386761.jpeg",
+    "ca": 12,
+    "pv": 11,
+    "mov": 9
+  },
+  {
+    "nombre": "Bandit Captain",
+    "icon": "638741963812124513.jpeg",
+    "ca": 15,
+    "pv": 52,
+    "mov": 9
+  },
+  {
+    "nombre": "Bandit Crime Lord",
+    "icon": "638741963814775509.jpeg",
+    "ca": 17,
+    "pv": 169,
+    "mov": 9
+  },
+  {
+    "nombre": "Bandit Deceiver",
+    "icon": "638741963818074938.jpeg",
+    "ca": 16,
+    "pv": 130,
+    "mov": 9
+  },
+  {
+    "nombre": "Banshee",
+    "icon": "638741963824156810.jpeg",
+    "ca": 12,
+    "pv": 54,
+    "mov": 2
+  },
+  {
+    "nombre": "Barbed Devil",
+    "icon": "638741963826807646.jpeg",
+    "ca": 15,
+    "pv": 110,
+    "mov": 9
+  },
+  {
+    "nombre": "Barlgura",
+    "icon": "638741963829357647.jpeg",
+    "ca": 15,
+    "pv": 85,
+    "mov": 12
+  },
+  {
+    "nombre": "Basilisk",
+    "icon": "638741963832361115.jpeg",
+    "ca": 15,
+    "pv": 52,
+    "mov": 6
+  },
+  {
+    "nombre": "Bat",
+    "icon": "638607409598192740.jpeg",
+    "ca": 12,
+    "pv": 1,
+    "mov": 2
+  },
+  {
+    "nombre": "Bearded Devil",
+    "icon": "638741963835167738.jpeg",
+    "ca": 13,
+    "pv": 58,
+    "mov": 9
+  },
+  {
+    "nombre": "Behir",
+    "icon": "638741963837838768.jpeg",
+    "ca": 17,
+    "pv": 168,
+    "mov": 15
+  },
+  {
+    "nombre": "Beholder",
+    "icon": "638741963842557596.jpeg",
+    "ca": 18,
+    "pv": 190,
+    "mov": 2
+  },
+  {
+    "nombre": "Beholder Zombie",
+    "icon": "638741963840685622.jpeg",
+    "ca": 15,
+    "pv": 93,
+    "mov": 2
+  },
+  {
+    "nombre": "Berserker",
+    "icon": "638742804951282434.jpeg",
+    "ca": 13,
+    "pv": 67,
+    "mov": 9
+  },
+  {
+    "nombre": "Berserker Commander",
+    "icon": "638741963845835363.jpeg",
+    "ca": 16,
+    "pv": 136,
+    "mov": 12
+  },
+  {
+    "nombre": "Black Bear",
+    "icon": "638607409966263242.jpeg",
+    "ca": 11,
+    "pv": 19,
+    "mov": 9
+  },
+  {
+    "nombre": "Black Dragon Wyrmling",
+    "icon": "638742862600832424.jpeg",
+    "ca": 17,
+    "pv": 33,
+    "mov": 9
+  },
+  {
+    "nombre": "Black Pudding",
+    "icon": "638741963849597583.jpeg",
+    "ca": 7,
+    "pv": 68,
+    "mov": 6
+  },
+  {
+    "nombre": "Blink Dog",
+    "icon": "638742806358648946.jpeg",
+    "ca": 13,
+    "pv": 22,
+    "mov": 12
+  },
+  {
+    "nombre": "Blob of Annihilation",
+    "icon": "638741963852427759.jpeg",
+    "ca": 18,
+    "pv": 448,
+    "mov": 9
+  },
+  {
+    "nombre": "Blood Hawk",
+    "icon": "638742156672357007.jpeg",
+    "ca": 12,
+    "pv": 7,
+    "mov": 3
+  },
+  {
+    "nombre": "Blue Dragon Wyrmling",
+    "icon": "638741963857907160.jpeg",
+    "ca": 17,
+    "pv": 65,
+    "mov": 9
+  },
+  {
+    "nombre": "Blue Slaad",
+    "icon": "638741963860713629.jpeg",
+    "ca": 15,
+    "pv": 133,
+    "mov": 9
+  },
+  {
+    "nombre": "Boar",
+    "icon": "638607410434493290.jpeg",
+    "ca": 11,
+    "pv": 13,
+    "mov": 12
+  },
+  {
+    "nombre": "Bone Devil",
+    "icon": "638741963863369111.jpeg",
+    "ca": 16,
+    "pv": 161,
+    "mov": 12
+  },
+  {
+    "nombre": "Bone Naga",
+    "icon": "638742858655791688.jpeg",
+    "ca": 15,
+    "pv": 65,
+    "mov": 12
+  },
+  {
+    "nombre": "Brass Dragon Wyrmling",
+    "icon": "638741963866019358.jpeg",
+    "ca": 15,
+    "pv": 22,
+    "mov": 9
+  },
+  {
+    "nombre": "Brazen Gorgon",
+    "icon": "638741963868826886.jpeg",
+    "ca": 19,
+    "pv": 161,
+    "mov": 12
+  },
+  {
+    "nombre": "Bronze Dragon Wyrmling",
+    "icon": "638741963871327054.jpeg",
+    "ca": 15,
+    "pv": 39,
+    "mov": 9
+  },
+  {
+    "nombre": "Brown Bear",
+    "icon": "638607413476883184.jpeg",
+    "ca": 11,
+    "pv": 22,
+    "mov": 12
+  },
+  {
+    "nombre": "Bugbear Stalker",
+    "icon": "638742157684088472.jpeg",
+    "ca": 15,
+    "pv": 65,
+    "mov": 9
+  },
+  {
+    "nombre": "Bugbear Warrior",
+    "icon": "638742808057694730.jpeg",
+    "ca": 14,
+    "pv": 33,
+    "mov": 9
+  },
+  {
+    "nombre": "Bulette",
+    "icon": "638741963880454355.jpeg",
+    "ca": 17,
+    "pv": 94,
+    "mov": 12
+  },
+  {
+    "nombre": "Bulette Pup",
+    "icon": "638741963877621706.jpeg",
+    "ca": 16,
+    "pv": 45,
+    "mov": 9
+  },
+  {
+    "nombre": "Bullywug Bog Sage",
+    "icon": "638742810248496972.jpeg",
+    "ca": 16,
+    "pv": 52,
+    "mov": 9
+  },
+  {
+    "nombre": "Bullywug Warrior",
+    "icon": "638742811169784760.jpeg",
+    "ca": 15,
+    "pv": 11,
+    "mov": 9
+  },
+  {
+    "nombre": "Cambion",
+    "icon": "638741963883610099.jpeg",
+    "ca": 19,
+    "pv": 105,
+    "mov": 9
+  },
+  {
+    "nombre": "Camel",
+    "icon": "638607413886651586.jpeg",
+    "ca": 10,
+    "pv": 17,
+    "mov": 15
+  },
+  {
+    "nombre": "Carrion Crawler",
+    "icon": "638741963886575702.jpeg",
+    "ca": 13,
+    "pv": 51,
+    "mov": 9
+  },
+  {
+    "nombre": "Cat",
+    "icon": "638607414146520300.jpeg",
+    "ca": 12,
+    "pv": 2,
+    "mov": 12
+  },
+  {
+    "nombre": "Centaur Trooper",
+    "icon": "638741963890005751.jpeg",
+    "ca": 16,
+    "pv": 45,
+    "mov": 15
+  },
+  {
+    "nombre": "Centaur Warden",
+    "icon": "638741963892038202.jpeg",
+    "ca": 16,
+    "pv": 105,
+    "mov": 15
+  },
+  {
+    "nombre": "Chain Devil",
+    "icon": "638741963894532079.jpeg",
+    "ca": 15,
+    "pv": 85,
+    "mov": 9
+  },
+  {
+    "nombre": "Chasme",
+    "icon": "638741963898143749.jpeg",
+    "ca": 15,
+    "pv": 78,
+    "mov": 6
+  },
+  {
+    "nombre": "Chimera",
+    "icon": "638741963900967182.jpeg",
+    "ca": 14,
+    "pv": 114,
+    "mov": 9
+  },
+  {
+    "nombre": "Chuul",
+    "icon": "638741963903933668.jpeg",
+    "ca": 16,
+    "pv": 76,
+    "mov": 9
+  },
+  {
+    "nombre": "Clay Golem",
+    "icon": "638741963907519831.jpeg",
+    "ca": 14,
+    "pv": 123,
+    "mov": 6
+  },
+  {
+    "nombre": "Cloaker",
+    "icon": "638741963910481810.jpeg",
+    "ca": 14,
+    "pv": 91,
+    "mov": 3
+  },
+  {
+    "nombre": "Cloud Giant",
+    "icon": "638741963913290612.jpeg",
+    "ca": 14,
+    "pv": 200,
+    "mov": 12
+  },
+  {
+    "nombre": "Cockatrice",
+    "icon": "638741963919336626.jpeg",
+    "ca": 11,
+    "pv": 22,
+    "mov": 6
+  },
+  {
+    "nombre": "Cockatrice Regent",
+    "icon": "638741963916229783.jpeg",
+    "ca": 15,
+    "pv": 136,
+    "mov": 9
+  },
+  {
+    "nombre": "Colossus",
+    "icon": "638741963921869904.jpeg",
+    "ca": 23,
+    "pv": 553,
+    "mov": 18
+  },
+  {
+    "nombre": "Commoner",
+    "icon": "638741963924525353.jpeg",
+    "ca": 10,
+    "pv": 4,
+    "mov": 9
+  },
+  {
+    "nombre": "Constrictor Snake",
+    "icon": "638742830746745538.jpeg",
+    "ca": 13,
+    "pv": 13,
+    "mov": 9
+  },
+  {
+    "nombre": "Copper Dragon Wyrmling",
+    "icon": "638741963927492315.jpeg",
+    "ca": 16,
+    "pv": 22,
+    "mov": 9
+  },
+  {
+    "nombre": "Couatl",
+    "icon": "638741963930606927.jpeg",
+    "ca": 19,
+    "pv": 60,
+    "mov": 9
+  },
+  {
+    "nombre": "Crab",
+    "icon": "638607415124289729.jpeg",
+    "ca": 11,
+    "pv": 3,
+    "mov": 6
+  },
+  {
+    "nombre": "Crawling Claw",
+    "icon": "638741963932636958.jpeg",
+    "ca": 12,
+    "pv": 2,
+    "mov": 6
+  },
+  {
+    "nombre": "Crocodile",
+    "icon": "638607415523410034.jpeg",
+    "ca": 12,
+    "pv": 13,
+    "mov": 6
+  },
+  {
+    "nombre": "Cultist",
+    "icon": "638742812286582024.jpeg",
+    "ca": 12,
+    "pv": 9,
+    "mov": 9
+  },
+  {
+    "nombre": "Cultist Fanatic",
+    "icon": "638742813028339856.jpeg",
+    "ca": 13,
+    "pv": 44,
+    "mov": 9
+  },
+  {
+    "nombre": "Cultist Hierophant",
+    "icon": "638741963936226214.jpeg",
+    "ca": 16,
+    "pv": 144,
+    "mov": 9
+  },
+  {
+    "nombre": "Cyclops Oracle",
+    "icon": "638741963938717949.jpeg",
+    "ca": 16,
+    "pv": 207,
+    "mov": 12
+  },
+  {
+    "nombre": "Cyclops Sentry",
+    "icon": "638741963941704722.jpeg",
+    "ca": 14,
+    "pv": 138,
+    "mov": 12
+  },
+  {
+    "nombre": "Dao",
+    "icon": "638741963943597620.jpeg",
+    "ca": 18,
+    "pv": 200,
+    "mov": 9
+  },
+  {
+    "nombre": "Darkmantle",
+    "icon": "638741963946560889.jpeg",
+    "ca": 11,
+    "pv": 22,
+    "mov": 3
+  },
+  {
+    "nombre": "Death Cultist",
+    "icon": "638741963949368502.jpeg",
+    "ca": 17,
+    "pv": 127,
+    "mov": 9
+  },
+  {
+    "nombre": "Death Dog",
+    "icon": "638741963952642117.jpeg",
+    "ca": 12,
+    "pv": 39,
+    "mov": 12
+  },
+  {
+    "nombre": "Death Knight",
+    "icon": "638741963958415735.jpeg",
+    "ca": 20,
+    "pv": 199,
+    "mov": 9
+  },
+  {
+    "nombre": "Death Knight Aspirant",
+    "icon": "638741963955920359.jpeg",
+    "ca": 20,
+    "pv": 178,
+    "mov": 9
+  },
+  {
+    "nombre": "Death Slaad",
+    "icon": "638741963961066025.jpeg",
+    "ca": 18,
+    "pv": 178,
+    "mov": 12
+  },
+  {
+    "nombre": "Death Tyrant",
+    "icon": "638741963964210661.jpeg",
+    "ca": 19,
+    "pv": 195,
+    "mov": 2
+  },
+  {
+    "nombre": "Deer",
+    "icon": "638741963967346077.jpeg",
+    "ca": 13,
+    "pv": 4,
+    "mov": 15
+  },
+  {
+    "nombre": "Demilich",
+    "icon": "638741963970157375.jpeg",
+    "ca": 20,
+    "pv": 180,
+    "mov": 2
+  },
+  {
+    "nombre": "Deva",
+    "icon": "638741963972985591.jpeg",
+    "ca": 17,
+    "pv": 229,
+    "mov": 9
+  },
+  {
+    "nombre": "Dire Wolf",
+    "icon": "638742831345964759.jpeg",
+    "ca": 14,
+    "pv": 22,
+    "mov": 15
+  },
+  {
+    "nombre": "Dire Worg",
+    "icon": "638741963975480484.jpeg",
+    "ca": 16,
+    "pv": 147,
+    "mov": 15
+  },
+  {
+    "nombre": "Displacer Beast",
+    "icon": "638741963978135313.jpeg",
+    "ca": 13,
+    "pv": 76,
+    "mov": 12
+  },
+  {
+    "nombre": "Djinni",
+    "icon": "638741963980628031.jpeg",
+    "ca": 17,
+    "pv": 218,
+    "mov": 9
+  },
+  {
+    "nombre": "Doppelganger",
+    "icon": "638736097236612849.jpeg",
+    "ca": 14,
+    "pv": 52,
+    "mov": 9
+  },
+  {
+    "nombre": "Dracolich",
+    "icon": "638741963983749311.jpeg",
+    "ca": 20,
+    "pv": 225,
+    "mov": 12
+  },
+  {
+    "nombre": "Draft Horse",
+    "icon": "638607416540430468.jpeg",
+    "ca": 10,
+    "pv": 15,
+    "mov": 12
+  },
+  {
+    "nombre": "Dragon Turtle",
+    "icon": "638741963986576600.jpeg",
+    "ca": 20,
+    "pv": 356,
+    "mov": 6
+  },
+  {
+    "nombre": "Dretch",
+    "icon": "638741963988778806.jpeg",
+    "ca": 11,
+    "pv": 18,
+    "mov": 6
+  },
+  {
+    "nombre": "Drider",
+    "icon": "638741963991280004.jpeg",
+    "ca": 19,
+    "pv": 123,
+    "mov": 9
+  },
+  {
+    "nombre": "Druid",
+    "icon": "638741963994240067.jpeg",
+    "ca": 13,
+    "pv": 44,
+    "mov": 9
+  },
+  {
+    "nombre": "Dryad",
+    "icon": "638741963996892328.jpeg",
+    "ca": 16,
+    "pv": 22,
+    "mov": 9
+  },
+  {
+    "nombre": "Dust Mephit",
+    "icon": "638741964000037150.jpeg",
+    "ca": 12,
+    "pv": 17,
+    "mov": 9
+  },
+  {
+    "nombre": "Eagle",
+    "icon": "638741964002529266.jpeg",
+    "ca": 12,
+    "pv": 4,
+    "mov": 3
+  },
+  {
+    "nombre": "Earth Elemental",
+    "icon": "638741964006135937.jpeg",
+    "ca": 17,
+    "pv": 147,
+    "mov": 9
+  },
+  {
+    "nombre": "Efreeti",
+    "icon": "638741964008806403.jpeg",
+    "ca": 17,
+    "pv": 212,
+    "mov": 12
+  },
+  {
+    "nombre": "Elemental Cataclysm",
+    "icon": "638741964011947561.jpeg",
+    "ca": 20,
+    "pv": 370,
+    "mov": 18
+  },
+  {
+    "nombre": "Elemental Cultist",
+    "icon": "638741964015378473.jpeg",
+    "ca": 16,
+    "pv": 135,
+    "mov": 9
+  },
+  {
+    "nombre": "Elephant",
+    "icon": "638607417002130871.jpeg",
+    "ca": 12,
+    "pv": 76,
+    "mov": 12
+  },
+  {
+    "nombre": "Elk",
+    "icon": "638742831953623664.jpeg",
+    "ca": 10,
+    "pv": 11,
+    "mov": 15
+  },
+  {
+    "nombre": "Empyrean",
+    "icon": "",
+    "ca": 22,
+    "pv": 346,
+    "mov": 15
+  },
+  {
+    "nombre": "Empyrean Iota",
+    "icon": "",
+    "ca": 13,
+    "pv": 22,
+    "mov": 2
+  },
+  {
+    "nombre": "Erinyes",
+    "icon": "638741964027878273.jpeg",
+    "ca": 18,
+    "pv": 178,
+    "mov": 9
+  },
+  {
+    "nombre": "Ettercap",
+    "icon": "638741964030691988.jpeg",
+    "ca": 13,
+    "pv": 44,
+    "mov": 9
+  },
+  {
+    "nombre": "Ettin",
+    "icon": "638741964033866293.jpeg",
+    "ca": 12,
+    "pv": 85,
+    "mov": 12
+  },
+  {
+    "nombre": "Faerie Dragon Adult",
+    "icon": "638741964038078286.jpeg",
+    "ca": 15,
+    "pv": 35,
+    "mov": 3
+  },
+  {
+    "nombre": "Faerie Dragon Youth",
+    "icon": "638741964041218283.jpeg",
+    "ca": 13,
+    "pv": 21,
+    "mov": 3
+  },
+  {
+    "nombre": "Fiend Cultist",
+    "icon": "638741964043090272.jpeg",
+    "ca": 16,
+    "pv": 127,
+    "mov": 9
+  },
+  {
+    "nombre": "Fire Elemental",
+    "icon": "638742814891874801.jpeg",
+    "ca": 13,
+    "pv": 93,
+    "mov": 15
+  },
+  {
+    "nombre": "Fire Giant",
+    "icon": "638741964045898377.jpeg",
+    "ca": 18,
+    "pv": 162,
+    "mov": 9
+  },
+  {
+    "nombre": "Flameskull",
+    "icon": "638741964049194247.jpeg",
+    "ca": 13,
+    "pv": 40,
+    "mov": 2
+  },
+  {
+    "nombre": "Flaming Skeleton",
+    "icon": "638767835122408942.jpeg",
+    "ca": 15,
+    "pv": 65,
+    "mov": 9
+  },
+  {
+    "nombre": "Flesh Golem",
+    "icon": "638741964053722429.jpeg",
+    "ca": 9,
+    "pv": 127,
+    "mov": 9
+  },
+  {
+    "nombre": "Flumph",
+    "icon": "638741964056234321.jpeg",
+    "ca": 12,
+    "pv": 7,
+    "mov": 2
+  },
+  {
+    "nombre": "Flying Snake",
+    "icon": "638741964058574345.jpeg",
+    "ca": 14,
+    "pv": 5,
+    "mov": 9
+  },
+  {
+    "nombre": "Fomorian",
+    "icon": "638741964061696765.jpeg",
+    "ca": 14,
+    "pv": 172,
+    "mov": 12
+  },
+  {
+    "nombre": "Frog",
+    "icon": "638607417426081315.jpeg",
+    "ca": 11,
+    "pv": 1,
+    "mov": 6
+  },
+  {
+    "nombre": "Frost Giant",
+    "icon": "638741964064038575.jpeg",
+    "ca": 15,
+    "pv": 149,
+    "mov": 12
+  },
+  {
+    "nombre": "Galeb Duhr",
+    "icon": "638741964066688852.jpeg",
+    "ca": 16,
+    "pv": 123,
+    "mov": null
+  },
+  {
+    "nombre": "Gargoyle",
+    "icon": "638741964069830078.jpeg",
+    "ca": 15,
+    "pv": 67,
+    "mov": 9
+  },
+  {
+    "nombre": "Gas Spore Fungus",
+    "icon": "638741964072498407.jpeg",
+    "ca": 8,
+    "pv": 13,
+    "mov": 2
+  },
+  {
+    "nombre": "Gelatinous Cube",
+    "icon": "638741964076554653.jpeg",
+    "ca": 6,
+    "pv": 63,
+    "mov": 4
+  },
+  {
+    "nombre": "Ghast",
+    "icon": "638741964081742942.jpeg",
+    "ca": 13,
+    "pv": 36,
+    "mov": 9
+  },
+  {
+    "nombre": "Ghast Gravecaller",
+    "icon": "638741964078603440.jpeg",
+    "ca": 16,
+    "pv": 97,
+    "mov": 9
+  },
+  {
+    "nombre": "Ghost",
+    "icon": "638741964084863239.jpeg",
+    "ca": 11,
+    "pv": 45,
+    "mov": 2
+  },
+  {
+    "nombre": "Ghoul",
+    "icon": "638741964087514459.jpeg",
+    "ca": 12,
+    "pv": 22,
+    "mov": 9
+  },
+  {
+    "nombre": "Giant Ape",
+    "icon": "638741964090199887.jpeg",
+    "ca": 12,
+    "pv": 168,
+    "mov": 12
+  },
+  {
+    "nombre": "Giant Axe Beak",
+    "icon": "638741964091914680.jpeg",
+    "ca": 15,
+    "pv": 84,
+    "mov": 15
+  },
+  {
+    "nombre": "Giant Badger",
+    "icon": "638607417896181419.jpeg",
+    "ca": 13,
+    "pv": 15,
+    "mov": 9
+  },
+  {
+    "nombre": "Giant Bat",
+    "icon": "638741964094408428.jpeg",
+    "ca": 13,
+    "pv": 22,
+    "mov": 3
+  },
+  {
+    "nombre": "Giant Boar",
+    "icon": "638741964097222858.jpeg",
+    "ca": 13,
+    "pv": 42,
+    "mov": 12
+  },
+  {
+    "nombre": "Giant Centipede",
+    "icon": "638741964100543394.jpeg",
+    "ca": 14,
+    "pv": 9,
+    "mov": 9
+  },
+  {
+    "nombre": "Giant Constrictor Snake",
+    "icon": "638741964102900581.jpeg",
+    "ca": 12,
+    "pv": 60,
+    "mov": 9
+  },
+  {
+    "nombre": "Giant Crab",
+    "icon": "638607418420731717.jpeg",
+    "ca": 15,
+    "pv": 13,
+    "mov": 9
+  },
+  {
+    "nombre": "Giant Crocodile",
+    "icon": "638741964105864539.jpeg",
+    "ca": 14,
+    "pv": 85,
+    "mov": 9
+  },
+  {
+    "nombre": "Giant Eagle",
+    "icon": "638741964109160550.jpeg",
+    "ca": 13,
+    "pv": 26,
+    "mov": 3
+  },
+  {
+    "nombre": "Giant Elk",
+    "icon": "638741964111814007.jpeg",
+    "ca": 14,
+    "pv": 42,
+    "mov": 18
+  },
+  {
+    "nombre": "Giant Fire Beetle",
+    "icon": "638741964114019332.jpeg",
+    "ca": 13,
+    "pv": 4,
+    "mov": 9
+  },
+  {
+    "nombre": "Giant Frog",
+    "icon": "638741964116983351.jpeg",
+    "ca": 11,
+    "pv": 18,
+    "mov": 9
+  },
+  {
+    "nombre": "Giant Goat",
+    "icon": "638742834565228980.jpeg",
+    "ca": 11,
+    "pv": 19,
+    "mov": 12
+  },
+  {
+    "nombre": "Giant Hyena",
+    "icon": "638741964120414350.jpeg",
+    "ca": 12,
+    "pv": 45,
+    "mov": 15
+  },
+  {
+    "nombre": "Giant Lizard",
+    "icon": "638741964123576361.jpeg",
+    "ca": 12,
+    "pv": 19,
+    "mov": 12
+  },
+  {
+    "nombre": "Giant Octopus",
+    "icon": "638741964126227949.jpeg",
+    "ca": 11,
+    "pv": 45,
+    "mov": 3
+  },
+  {
+    "nombre": "Giant Owl",
+    "icon": "638741964129657804.jpeg",
+    "ca": 12,
+    "pv": 19,
+    "mov": 2
+  },
+  {
+    "nombre": "Giant Rat",
+    "icon": "638741964132622849.jpeg",
+    "ca": 13,
+    "pv": 7,
+    "mov": 9
+  },
+  {
+    "nombre": "Giant Scorpion",
+    "icon": "638741964135604629.jpeg",
+    "ca": 15,
+    "pv": 52,
+    "mov": 12
+  },
+  {
+    "nombre": "Giant Seahorse",
+    "icon": "638607418888752666.jpeg",
+    "ca": 14,
+    "pv": 16,
+    "mov": 2
+  },
+  {
+    "nombre": "Giant Shark",
+    "icon": "638741964140776967.jpeg",
+    "ca": 13,
+    "pv": 92,
+    "mov": 2
+  },
+  {
+    "nombre": "Giant Spider",
+    "icon": "638607426458975567.jpeg",
+    "ca": 14,
+    "pv": 26,
+    "mov": 9
+  },
+  {
+    "nombre": "Giant Squid",
+    "icon": "638741964143115295.jpeg",
+    "ca": 12,
+    "pv": 120,
+    "mov": 2
+  },
+  {
+    "nombre": "Giant Toad",
+    "icon": "638741964145940654.jpeg",
+    "ca": 11,
+    "pv": 39,
+    "mov": 9
+  },
+  {
+    "nombre": "Giant Venomous Snake",
+    "icon": "638741964149062305.jpeg",
+    "ca": 14,
+    "pv": 11,
+    "mov": 12
+  },
+  {
+    "nombre": "Giant Vulture",
+    "icon": "638741964151712633.jpeg",
+    "ca": 10,
+    "pv": 25,
+    "mov": 3
+  },
+  {
+    "nombre": "Giant Wasp",
+    "icon": "638741964154679528.jpeg",
+    "ca": 13,
+    "pv": 22,
+    "mov": 3
+  },
+  {
+    "nombre": "Giant Weasel",
+    "icon": "638607426812885808.jpeg",
+    "ca": 13,
+    "pv": 9,
+    "mov": 12
+  },
+  {
+    "nombre": "Giant Wolf Spider",
+    "icon": "638741964156568682.jpeg",
+    "ca": 13,
+    "pv": 11,
+    "mov": 12
+  },
+  {
+    "nombre": "Gibbering Mouther",
+    "icon": "638741964158774660.jpeg",
+    "ca": 9,
+    "pv": 52,
+    "mov": 6
+  },
+  {
+    "nombre": "Githyanki Dracomancer",
+    "icon": "638741964162207523.jpeg",
+    "ca": 18,
+    "pv": 255,
+    "mov": 9
+  },
+  {
+    "nombre": "Githyanki Knight",
+    "icon": "638741964165792748.jpeg",
+    "ca": 18,
+    "pv": 117,
+    "mov": 9
+  },
+  {
+    "nombre": "Githyanki Warrior",
+    "icon": "638741964168309282.jpeg",
+    "ca": 17,
+    "pv": 49,
+    "mov": 9
+  },
+  {
+    "nombre": "Githzerai Monk",
+    "icon": "638741964171136739.jpeg",
+    "ca": 14,
+    "pv": 38,
+    "mov": 12
+  },
+  {
+    "nombre": "Githzerai Psion",
+    "icon": "638741964173340746.jpeg",
+    "ca": 18,
+    "pv": 169,
+    "mov": 12
+  },
+  {
+    "nombre": "Githzerai Zerth",
+    "icon": "638741964175994029.jpeg",
+    "ca": 17,
+    "pv": 84,
+    "mov": 12
+  },
+  {
+    "nombre": "Glabrezu",
+    "icon": "638741964178176794.jpeg",
+    "ca": 17,
+    "pv": 189,
+    "mov": 12
+  },
+  {
+    "nombre": "Gladiator",
+    "icon": "638741964180694496.jpeg",
+    "ca": 16,
+    "pv": 112,
+    "mov": 9
+  },
+  {
+    "nombre": "Gnoll Demoniac",
+    "icon": "638741964183680971.jpeg",
+    "ca": 16,
+    "pv": 135,
+    "mov": 9
+  },
+  {
+    "nombre": "Gnoll Fang of Yeenoghu",
+    "icon": "638741964186487082.jpeg",
+    "ca": 14,
+    "pv": 71,
+    "mov": 9
+  },
+  {
+    "nombre": "Gnoll Pack Lord",
+    "icon": "638741964188514934.jpeg",
+    "ca": 15,
+    "pv": 49,
+    "mov": 9
+  },
+  {
+    "nombre": "Gnoll Warrior",
+    "icon": "638741964190540850.jpeg",
+    "ca": 15,
+    "pv": 27,
+    "mov": 9
+  },
+  {
+    "nombre": "Goat",
+    "icon": "638742835857217408.jpeg",
+    "ca": 10,
+    "pv": 4,
+    "mov": 12
+  },
+  {
+    "nombre": "Goblin Boss",
+    "icon": "638741964193525061.jpeg",
+    "ca": 17,
+    "pv": 21,
+    "mov": 9
+  },
+  {
+    "nombre": "Goblin Hexer",
+    "icon": "638741964196802375.jpeg",
+    "ca": 13,
+    "pv": 45,
+    "mov": 9
+  },
+  {
     "nombre": "Goblin Minion",
-    "icon": "goblin_minion.webp",
+    "icon": "638741964200236920.jpeg",
     "ca": 12,
     "pv": 7,
     "mov": 9
+  },
+  {
+    "nombre": "Goblin Warrior",
+    "icon": "638741964202886887.jpeg",
+    "ca": 15,
+    "pv": 10,
+    "mov": 9
+  },
+  {
+    "nombre": "Gold Dragon Wyrmling",
+    "icon": "638741964205247552.jpeg",
+    "ca": 17,
+    "pv": 60,
+    "mov": 9
+  },
+  {
+    "nombre": "Gorgon",
+    "icon": "638741964207292842.jpeg",
+    "ca": 19,
+    "pv": 114,
+    "mov": 12
+  },
+  {
+    "nombre": "Goristro",
+    "icon": "638741964210102498.jpeg",
+    "ca": 19,
+    "pv": 310,
+    "mov": 15
+  },
+  {
+    "nombre": "Graveyard Revenant",
+    "icon": "638741964212284844.jpeg",
+    "ca": 14,
+    "pv": 161,
+    "mov": 12
+  },
+  {
+    "nombre": "Gray Ooze",
+    "icon": "638742816351321377.jpeg",
+    "ca": 9,
+    "pv": 22,
+    "mov": 3
+  },
+  {
+    "nombre": "Gray Slaad",
+    "icon": "638741964214470475.jpeg",
+    "ca": 18,
+    "pv": 150,
+    "mov": 12
+  },
+  {
+    "nombre": "Green Dragon Wyrmling",
+    "icon": "638741964216519319.jpeg",
+    "ca": 17,
+    "pv": 38,
+    "mov": 9
+  },
+  {
+    "nombre": "Green Hag",
+    "icon": "638741964220436859.jpeg",
+    "ca": 17,
+    "pv": 82,
+    "mov": 9
+  },
+  {
+    "nombre": "Green Slaad",
+    "icon": "638741964223088943.jpeg",
+    "ca": 16,
+    "pv": 144,
+    "mov": 9
+  },
+  {
+    "nombre": "Grell",
+    "icon": "638741964225429233.jpeg",
+    "ca": 12,
+    "pv": 55,
+    "mov": 3
+  },
+  {
+    "nombre": "Grick",
+    "icon": "638741964230600134.jpeg",
+    "ca": 14,
+    "pv": 54,
+    "mov": 9
+  },
+  {
+    "nombre": "Grick Ancient",
+    "icon": "638741964227790120.jpeg",
+    "ca": 18,
+    "pv": 135,
+    "mov": 9
+  },
+  {
+    "nombre": "Griffon",
+    "icon": "638741964233313670.jpeg",
+    "ca": 12,
+    "pv": 59,
+    "mov": 9
+  },
+  {
+    "nombre": "Grimlock",
+    "icon": "638741964235650005.jpeg",
+    "ca": 11,
+    "pv": 11,
+    "mov": 9
+  },
+  {
+    "nombre": "Guard",
+    "icon": "638741964242535277.jpeg",
+    "ca": 16,
+    "pv": 11,
+    "mov": 9
+  },
+  {
+    "nombre": "Guard Captain",
+    "icon": "638741964240197393.jpeg",
+    "ca": 18,
+    "pv": 75,
+    "mov": 9
+  },
+  {
+    "nombre": "Guardian Naga",
+    "icon": "638741964244560957.jpeg",
+    "ca": 18,
+    "pv": 136,
+    "mov": 12
+  },
+  {
+    "nombre": "Gulthias Blight",
+    "icon": "638741964247232983.jpeg",
+    "ca": 20,
+    "pv": 264,
+    "mov": 15
+  },
+  {
+    "nombre": "Half-Dragon",
+    "icon": "638741964250237108.jpeg",
+    "ca": 18,
+    "pv": 105,
+    "mov": 12
+  },
+  {
+    "nombre": "Harpy",
+    "icon": "638741964253048529.jpeg",
+    "ca": 11,
+    "pv": 38,
+    "mov": 6
+  },
+  {
+    "nombre": "Haunting Revenant",
+    "icon": "638741964257257648.jpeg",
+    "ca": 20,
+    "pv": 203,
+    "mov": 9
+  },
+  {
+    "nombre": "Hawk",
+    "icon": "638607427375996839.jpeg",
+    "ca": 13,
+    "pv": 1,
+    "mov": 3
+  },
+  {
+    "nombre": "Hell Hound",
+    "icon": "638741964261197076.jpeg",
+    "ca": 15,
+    "pv": 58,
+    "mov": 15
+  },
+  {
+    "nombre": "Helmed Horror",
+    "icon": "638741964264163819.jpeg",
+    "ca": 20,
+    "pv": 67,
+    "mov": 9
+  },
+  {
+    "nombre": "Hezrou",
+    "icon": "638741964267926763.jpeg",
+    "ca": 18,
+    "pv": 157,
+    "mov": 9
+  },
+  {
+    "nombre": "Hill Giant",
+    "icon": "638741964271067767.jpeg",
+    "ca": 13,
+    "pv": 105,
+    "mov": 12
+  },
+  {
+    "nombre": "Hippogriff",
+    "icon": "638741964274187190.jpeg",
+    "ca": 11,
+    "pv": 26,
+    "mov": 12
+  },
+  {
+    "nombre": "Hippopotamus",
+    "icon": "638741964277308105.jpeg",
+    "ca": 14,
+    "pv": 82,
+    "mov": 9
+  },
+  {
+    "nombre": "Hobgoblin Captain",
+    "icon": "638741964280447262.jpeg",
+    "ca": 17,
+    "pv": 58,
+    "mov": 9
+  },
+  {
+    "nombre": "Hobgoblin Warlord",
+    "icon": "638741964283523129.jpeg",
+    "ca": 20,
+    "pv": 112,
+    "mov": 9
+  },
+  {
+    "nombre": "Hobgoblin Warrior",
+    "icon": "638741964286645034.jpeg",
+    "ca": 18,
+    "pv": 11,
+    "mov": 9
+  },
+  {
+    "nombre": "Homunculus",
+    "icon": "638741964289141921.jpeg",
+    "ca": 13,
+    "pv": 4,
+    "mov": 6
+  },
+  {
+    "nombre": "Hook Horror",
+    "icon": "638741964292123179.jpeg",
+    "ca": 15,
+    "pv": 75,
+    "mov": 9
+  },
+  {
+    "nombre": "Horned Devil",
+    "icon": "638741964295090570.jpeg",
+    "ca": 18,
+    "pv": 199,
+    "mov": 9
+  },
+  {
+    "nombre": "Hunter Shark",
+    "icon": "638741964297895187.jpeg",
+    "ca": 12,
+    "pv": 45,
+    "mov": 2
+  },
+  {
+    "nombre": "Hydra",
+    "icon": "638741964300550266.jpeg",
+    "ca": 15,
+    "pv": 184,
+    "mov": 12
+  },
+  {
+    "nombre": "Hyena",
+    "icon": "638741964302419297.jpeg",
+    "ca": 11,
+    "pv": 5,
+    "mov": 15
+  },
+  {
+    "nombre": "Ice Devil",
+    "icon": "638741964306339207.jpeg",
+    "ca": 18,
+    "pv": 228,
+    "mov": 12
+  },
+  {
+    "nombre": "Ice Mephit",
+    "icon": "638741964308681447.jpeg",
+    "ca": 11,
+    "pv": 21,
+    "mov": 9
+  },
+  {
+    "nombre": "Imp",
+    "icon": "638607427689186965.jpeg",
+    "ca": 13,
+    "pv": 21,
+    "mov": 6
+  },
+  {
+    "nombre": "Incubus",
+    "icon": "638742817353508783.jpeg",
+    "ca": 15,
+    "pv": 66,
+    "mov": 9
+  },
+  {
+    "nombre": "Intellect Devourer",
+    "icon": "638741964311337866.jpeg",
+    "ca": 12,
+    "pv": 28,
+    "mov": 12
+  },
+  {
+    "nombre": "Invisible Stalker",
+    "icon": "638741964314008236.jpeg",
+    "ca": 14,
+    "pv": 97,
+    "mov": 15
+  },
+  {
+    "nombre": "Iron Golem",
+    "icon": "638741964316987200.jpeg",
+    "ca": 20,
+    "pv": 252,
+    "mov": 9
+  },
+  {
+    "nombre": "Jackal",
+    "icon": "638741964320110052.jpeg",
+    "ca": 12,
+    "pv": 3,
+    "mov": 12
+  },
+  {
+    "nombre": "Jackalwere",
+    "icon": "638741964322603258.jpeg",
+    "ca": 12,
+    "pv": 18,
+    "mov": 12
+  },
+  {
+    "nombre": "Juvenile Shadow Dragon",
+    "icon": "638741964325119217.jpeg",
+    "ca": 15,
+    "pv": 45,
+    "mov": 9
+  },
+  {
+    "nombre": "Kenku",
+    "icon": "638741964327461195.jpeg",
+    "ca": 13,
+    "pv": 13,
+    "mov": 9
+  },
+  {
+    "nombre": "Killer Whale",
+    "icon": "638741964331361137.jpeg",
+    "ca": 12,
+    "pv": 90,
+    "mov": 2
+  },
+  {
+    "nombre": "Knight",
+    "icon": "638736708829809115.jpeg",
+    "ca": 18,
+    "pv": 52,
+    "mov": 9
+  },
+  {
+    "nombre": "Kobold Warrior",
+    "icon": "638741964333543334.jpeg",
+    "ca": 14,
+    "pv": 7,
+    "mov": 9
+  },
+  {
+    "nombre": "Kraken",
+    "icon": "638741964336375221.jpeg",
+    "ca": 18,
+    "pv": 481,
+    "mov": 9
+  },
+  {
+    "nombre": "Kuo-toa",
+    "icon": "638741964346557477.jpeg",
+    "ca": 13,
+    "pv": 18,
+    "mov": 9
+  },
+  {
+    "nombre": "Kuo-toa Archpriest",
+    "icon": "638741964340135289.jpeg",
+    "ca": 13,
+    "pv": 105,
+    "mov": 9
+  },
+  {
+    "nombre": "Kuo-toa Monitor",
+    "icon": "638752488564801399.jpeg",
+    "ca": 13,
+    "pv": 65,
+    "mov": 9
+  },
+  {
+    "nombre": "Kuo-toa Whip",
+    "icon": "638752489590992203.jpeg",
+    "ca": 11,
+    "pv": 45,
+    "mov": 9
+  },
+  {
+    "nombre": "Lacedon Ghoul",
+    "icon": "638741964348892505.jpeg",
+    "ca": 12,
+    "pv": 22,
+    "mov": 9
+  },
+  {
+    "nombre": "Lamia",
+    "icon": "638741964352033173.jpeg",
+    "ca": 13,
+    "pv": 97,
+    "mov": 12
+  },
+  {
+    "nombre": "Larva",
+    "icon": "638741964354059340.jpeg",
+    "ca": 9,
+    "pv": 9,
+    "mov": 6
+  },
+  {
+    "nombre": "Lemure",
+    "icon": "638741964356244966.jpeg",
+    "ca": 9,
+    "pv": 9,
+    "mov": 6
+  },
+  {
+    "nombre": "Lich",
+    "icon": "638741964359717744.jpeg",
+    "ca": 20,
+    "pv": 315,
+    "mov": 9
+  },
+  {
+    "nombre": "Lion",
+    "icon": "638607428015267243.jpeg",
+    "ca": 12,
+    "pv": 22,
+    "mov": 15
+  },
+  {
+    "nombre": "Lizard",
+    "icon": "638742836528569256.jpeg",
+    "ca": 10,
+    "pv": 2,
+    "mov": 6
+  },
+  {
+    "nombre": "Lizardfolk Geomancer",
+    "icon": "638741964362057675.jpeg",
+    "ca": 13,
+    "pv": 33,
+    "mov": 9
+  },
+  {
+    "nombre": "Lizardfolk Sovereign",
+    "icon": "638741964365177854.jpeg",
+    "ca": 15,
+    "pv": 78,
+    "mov": 9
+  },
+  {
+    "nombre": "Mage",
+    "icon": "638742819087925312.jpeg",
+    "ca": 15,
+    "pv": 81,
+    "mov": 9
+  },
+  {
+    "nombre": "Mage Apprentice",
+    "icon": "638741964368451966.jpeg",
+    "ca": 15,
+    "pv": 49,
+    "mov": 9
+  },
+  {
+    "nombre": "Magma Mephit",
+    "icon": "638741964371123369.jpeg",
+    "ca": 11,
+    "pv": 18,
+    "mov": 9
+  },
+  {
+    "nombre": "Magmin",
+    "icon": "638741964373650844.jpeg",
+    "ca": 14,
+    "pv": 13,
+    "mov": 9
+  },
+  {
+    "nombre": "Mammoth",
+    "icon": "638741964376303354.jpeg",
+    "ca": 13,
+    "pv": 126,
+    "mov": 15
+  },
+  {
+    "nombre": "Manes",
+    "icon": "638741964381917736.jpeg",
+    "ca": 9,
+    "pv": 9,
+    "mov": 6
+  },
+  {
+    "nombre": "Manes Vaporspawn",
+    "icon": "638741964378953424.jpeg",
+    "ca": 13,
+    "pv": 19,
+    "mov": 9
+  },
+  {
+    "nombre": "Manticore",
+    "icon": "638741964385062638.jpeg",
+    "ca": 14,
+    "pv": 68,
+    "mov": 9
+  },
+  {
+    "nombre": "Marid",
+    "icon": "638741964388649165.jpeg",
+    "ca": 17,
+    "pv": 229,
+    "mov": 9
+  },
+  {
+    "nombre": "Marilith",
+    "icon": "638741964391922076.jpeg",
+    "ca": 16,
+    "pv": 220,
+    "mov": 12
+  },
+  {
+    "nombre": "Mastiff",
+    "icon": "638607428415948051.jpeg",
+    "ca": 12,
+    "pv": 5,
+    "mov": 12
+  },
+  {
+    "nombre": "Medusa",
+    "icon": "638741964395249901.jpeg",
+    "ca": 15,
+    "pv": 127,
+    "mov": 9
+  },
+  {
+    "nombre": "Merfolk Skirmisher",
+    "icon": "638741964397433543.jpeg",
+    "ca": 11,
+    "pv": 11,
+    "mov": 3
+  },
+  {
+    "nombre": "Merfolk Wavebender",
+    "icon": "638741964400083497.jpeg",
+    "ca": 14,
+    "pv": 97,
+    "mov": 3
+  },
+  {
+    "nombre": "Merrow",
+    "icon": "638741964402735497.jpeg",
+    "ca": 13,
+    "pv": 45,
+    "mov": 3
+  },
+  {
+    "nombre": "Mezzoloth",
+    "icon": "638741964405409122.jpeg",
+    "ca": 18,
+    "pv": 75,
+    "mov": 12
+  },
+  {
+    "nombre": "Mimic",
+    "icon": "638741964408547486.jpeg",
+    "ca": 12,
+    "pv": 58,
+    "mov": 6
+  },
+  {
+    "nombre": "Mind Flayer",
+    "icon": "638741964414477419.jpeg",
+    "ca": 15,
+    "pv": 99,
+    "mov": 9
+  },
+  {
+    "nombre": "Mind Flayer Arcanist",
+    "icon": "638741964411200043.jpeg",
+    "ca": 16,
+    "pv": 143,
+    "mov": 9
+  },
+  {
+    "nombre": "Minotaur of Baphomet",
+    "icon": "638741964416838756.jpeg",
+    "ca": 14,
+    "pv": 85,
+    "mov": 12
+  },
+  {
+    "nombre": "Minotaur Skeleton",
+    "icon": "638741964419651046.jpeg",
+    "ca": 12,
+    "pv": 45,
+    "mov": 12
+  },
+  {
+    "nombre": "Modron Duodrone",
+    "icon": "638741964422318985.jpeg",
+    "ca": 15,
+    "pv": 11,
+    "mov": 9
+  },
+  {
+    "nombre": "Modron Monodrone",
+    "icon": "638741964425143488.jpeg",
+    "ca": 15,
+    "pv": 5,
+    "mov": 9
+  },
+  {
+    "nombre": "Modron Pentadrone",
+    "icon": "638741964429046643.jpeg",
+    "ca": 16,
+    "pv": 32,
+    "mov": 12
+  },
+  {
+    "nombre": "Modron Quadrone",
+    "icon": "638741964431698881.jpeg",
+    "ca": 16,
+    "pv": 22,
+    "mov": 9
+  },
+  {
+    "nombre": "Modron Tridrone",
+    "icon": "638741964434214049.jpeg",
+    "ca": 15,
+    "pv": 16,
+    "mov": 9
+  },
+  {
+    "nombre": "Mud Mephit",
+    "icon": "638741964438005592.jpeg",
+    "ca": 11,
+    "pv": 13,
+    "mov": 6
+  },
+  {
+    "nombre": "Mule",
+    "icon": "638607428703028777.jpeg",
+    "ca": 10,
+    "pv": 11,
+    "mov": 12
+  },
+  {
+    "nombre": "Mummy",
+    "icon": "638741964442997625.jpeg",
+    "ca": 11,
+    "pv": 58,
+    "mov": 6
+  },
+  {
+    "nombre": "Mummy Lord",
+    "icon": "638741964439726919.jpeg",
+    "ca": 17,
+    "pv": 187,
+    "mov": 9
+  },
+  {
+    "nombre": "Myconid Adult",
+    "icon": "638741964445809113.jpeg",
+    "ca": 12,
+    "pv": 16,
+    "mov": 6
+  },
+  {
+    "nombre": "Myconid Sovereign",
+    "icon": "638741964448613678.jpeg",
+    "ca": 13,
+    "pv": 45,
+    "mov": 9
+  },
+  {
+    "nombre": "Myconid Spore Servant",
+    "icon": "638741964451306674.jpeg",
+    "ca": 13,
+    "pv": 37,
+    "mov": 6
+  },
+  {
+    "nombre": "Myconid Sprout",
+    "icon": "638741964454586771.jpeg",
+    "ca": 10,
+    "pv": 3,
+    "mov": 3
+  },
+  {
+    "nombre": "Nalfeshnee",
+    "icon": "638741964458172824.jpeg",
+    "ca": 18,
+    "pv": 184,
+    "mov": 6
+  },
+  {
+    "nombre": "Needle Blight",
+    "icon": "638741964461135837.jpeg",
+    "ca": 12,
+    "pv": 16,
+    "mov": 9
+  },
+  {
+    "nombre": "Night Hag",
+    "icon": "638741964463651588.jpeg",
+    "ca": 17,
+    "pv": 112,
+    "mov": 9
+  },
+  {
+    "nombre": "Nightmare",
+    "icon": "638741964465841418.jpeg",
+    "ca": 13,
+    "pv": 68,
+    "mov": 18
+  },
+  {
+    "nombre": "Noble",
+    "icon": "638741964473053055.jpeg",
+    "ca": 15,
+    "pv": 9,
+    "mov": 9
+  },
+  {
+    "nombre": "Noble Prodigy",
+    "icon": "638741964468976494.jpeg",
+    "ca": 16,
+    "pv": 148,
+    "mov": 9
+  },
+  {
+    "nombre": "Nothic",
+    "icon": "638741964476014474.jpeg",
+    "ca": 15,
+    "pv": 45,
+    "mov": 9
+  },
+  {
+    "nombre": "Nycaloth",
+    "icon": "638741964479179098.jpeg",
+    "ca": 18,
+    "pv": 152,
+    "mov": 12
+  },
+  {
+    "nombre": "Ochre Jelly",
+    "icon": "638741964481981807.jpeg",
+    "ca": 8,
+    "pv": 52,
+    "mov": 6
+  },
+  {
+    "nombre": "Octopus",
+    "icon": "638742837128618852.jpeg",
+    "ca": 12,
+    "pv": 3,
+    "mov": 2
+  },
+  {
+    "nombre": "Ogre",
+    "icon": "638742820393142602.jpeg",
+    "ca": 11,
+    "pv": 68,
+    "mov": 12
+  },
+  {
+    "nombre": "Ogre Zombie",
+    "icon": "638736097247260016.jpeg",
+    "ca": 8,
+    "pv": 85,
+    "mov": 9
+  },
+  {
+    "nombre": "Ogrillon Ogre",
+    "icon": "638741964486369773.jpeg",
+    "ca": 12,
+    "pv": 52,
+    "mov": 9
+  },
+  {
+    "nombre": "Oni",
+    "icon": "638741964489650231.jpeg",
+    "ca": 17,
+    "pv": 119,
+    "mov": 9
+  },
+  {
+    "nombre": "Otyugh",
+    "icon": "638741964492319734.jpeg",
+    "ca": 14,
+    "pv": 104,
+    "mov": 9
+  },
+  {
+    "nombre": "Owl",
+    "icon": "638742837729688628.jpeg",
+    "ca": 11,
+    "pv": 1,
+    "mov": 2
+  },
+  {
+    "nombre": "Owlbear",
+    "icon": "638741964494683421.jpeg",
+    "ca": 13,
+    "pv": 59,
+    "mov": 12
+  },
+  {
+    "nombre": "Panther",
+    "icon": "638742829883957474.jpeg",
+    "ca": 13,
+    "pv": 13,
+    "mov": 15
+  },
+  {
+    "nombre": "Pegasus",
+    "icon": "638741964496881813.jpeg",
+    "ca": 12,
+    "pv": 59,
+    "mov": 18
+  },
+  {
+    "nombre": "Performer",
+    "icon": "638741964504080607.jpeg",
+    "ca": 13,
+    "pv": 27,
+    "mov": 9
+  },
+  {
+    "nombre": "Performer Legend",
+    "icon": "638741964499223555.jpeg",
+    "ca": 20,
+    "pv": 162,
+    "mov": 9
+  },
+  {
+    "nombre": "Performer Maestro",
+    "icon": "638741964501719932.jpeg",
+    "ca": 18,
+    "pv": 110,
+    "mov": 9
+  },
+  {
+    "nombre": "Peryton",
+    "icon": "638741964506731585.jpeg",
+    "ca": 13,
+    "pv": 33,
+    "mov": 6
+  },
+  {
+    "nombre": "Phase Spider",
+    "icon": "638741964509717166.jpeg",
+    "ca": 14,
+    "pv": 45,
+    "mov": 9
+  },
+  {
+    "nombre": "Piercer",
+    "icon": "638741964512700153.jpeg",
+    "ca": 15,
+    "pv": 22,
+    "mov": 2
+  },
+  {
+    "nombre": "Piranha",
+    "icon": "638741964514881866.jpeg",
+    "ca": 13,
+    "pv": 1,
+    "mov": 2
+  },
+  {
+    "nombre": "Pirate",
+    "icon": "638742821615180284.jpeg",
+    "ca": 14,
+    "pv": 33,
+    "mov": 9
+  },
+  {
+    "nombre": "Pirate Admiral",
+    "icon": "638741964517867011.jpeg",
+    "ca": 20,
+    "pv": 182,
+    "mov": 9
+  },
+  {
+    "nombre": "Pirate Captain",
+    "icon": "638742822192879011.jpeg",
+    "ca": 17,
+    "pv": 84,
+    "mov": 9
+  },
+  {
+    "nombre": "Pit Fiend",
+    "icon": "638741964520361867.jpeg",
+    "ca": 21,
+    "pv": 337,
+    "mov": 9
+  },
+  {
+    "nombre": "Pixie",
+    "icon": "638741964527386421.jpeg",
+    "ca": 15,
+    "pv": 9,
+    "mov": 3
+  },
+  {
+    "nombre": "Pixie Wonderbringer",
+    "icon": "638741964523169842.jpeg",
+    "ca": 15,
+    "pv": 60,
+    "mov": 3
+  },
+  {
+    "nombre": "Planetar",
+    "icon": "638741964530190146.jpeg",
+    "ca": 19,
+    "pv": 262,
+    "mov": 12
+  },
+  {
+    "nombre": "Plesiosaurus",
+    "icon": "638741964533176362.jpeg",
+    "ca": 13,
+    "pv": 68,
+    "mov": 6
+  },
+  {
+    "nombre": "Polar Bear",
+    "icon": "638741964536449881.jpeg",
+    "ca": 12,
+    "pv": 42,
+    "mov": 12
+  },
+  {
+    "nombre": "Poltergeist",
+    "icon": "638741964538965951.jpeg",
+    "ca": 12,
+    "pv": 22,
+    "mov": 2
+  },
+  {
+    "nombre": "Pony",
+    "icon": "638607429634189821.jpeg",
+    "ca": 10,
+    "pv": 11,
+    "mov": 12
+  },
+  {
+    "nombre": "Priest",
+    "icon": "638741964544427520.jpeg",
+    "ca": 13,
+    "pv": 38,
+    "mov": 9
+  },
+  {
+    "nombre": "Priest Acolyte",
+    "icon": "638741964542089727.jpeg",
+    "ca": 13,
+    "pv": 11,
+    "mov": 9
+  },
+  {
+    "nombre": "Primeval Owlbear",
+    "icon": "638741964546297966.jpeg",
+    "ca": 16,
+    "pv": 126,
+    "mov": 12
+  },
+  {
+    "nombre": "Pseudodragon",
+    "icon": "638742822948687414.jpeg",
+    "ca": 14,
+    "pv": 10,
+    "mov": 4
+  },
+  {
+    "nombre": "Psychic Gray Ooze",
+    "icon": "638741964548639121.jpeg",
+    "ca": 9,
+    "pv": 37,
+    "mov": 3
+  },
+  {
+    "nombre": "Pteranodon",
+    "icon": "638741964550977965.jpeg",
+    "ca": 13,
+    "pv": 13,
+    "mov": 3
+  },
+  {
+    "nombre": "Purple Worm",
+    "icon": "638741964553651448.jpeg",
+    "ca": 18,
+    "pv": 247,
+    "mov": 15
+  },
+  {
+    "nombre": "Quaggoth",
+    "icon": "638741964558645333.jpeg",
+    "ca": 13,
+    "pv": 45,
+    "mov": 9
+  },
+  {
+    "nombre": "Quaggoth Thonot",
+    "icon": "638741964555837134.jpeg",
+    "ca": 15,
+    "pv": 67,
+    "mov": 9
+  },
+  {
+    "nombre": "Quasit",
+    "icon": "638742823654886227.jpeg",
+    "ca": 13,
+    "pv": 25,
+    "mov": 12
+  },
+  {
+    "nombre": "Questing Knight",
+    "icon": "638741964561293981.jpeg",
+    "ca": 18,
+    "pv": 202,
+    "mov": 9
+  },
+  {
+    "nombre": "Rakshasa",
+    "icon": "638741964564921938.jpeg",
+    "ca": 17,
+    "pv": 221,
+    "mov": 12
+  },
+  {
+    "nombre": "Rat",
+    "icon": "638742838302908263.jpeg",
+    "ca": 10,
+    "pv": 1,
+    "mov": 6
+  },
+  {
+    "nombre": "Raven",
+    "icon": "638742838862827460.jpeg",
+    "ca": 12,
+    "pv": 2,
+    "mov": 3
+  },
+  {
+    "nombre": "Red Dragon Wyrmling",
+    "icon": "638741964567421248.jpeg",
+    "ca": 17,
+    "pv": 75,
+    "mov": 9
+  },
+  {
+    "nombre": "Red Slaad",
+    "icon": "638741964569296892.jpeg",
+    "ca": 14,
+    "pv": 93,
+    "mov": 9
+  },
+  {
+    "nombre": "Reef Shark",
+    "icon": "638607431062581096.jpeg",
+    "ca": 12,
+    "pv": 22,
+    "mov": 2
+  },
+  {
+    "nombre": "Remorhaz",
+    "icon": "638741964573036352.jpeg",
+    "ca": 17,
+    "pv": 195,
+    "mov": 12
+  },
+  {
+    "nombre": "Revenant",
+    "icon": "638741964575896098.jpeg",
+    "ca": 13,
+    "pv": 127,
+    "mov": 9
+  },
+  {
+    "nombre": "Rhinoceros",
+    "icon": "638741964578412102.jpeg",
+    "ca": 13,
+    "pv": 45,
+    "mov": 12
+  },
+  {
+    "nombre": "Riding Horse",
+    "icon": "638607431384220950.jpeg",
+    "ca": 11,
+    "pv": 13,
+    "mov": 18
+  },
+  {
+    "nombre": "Roc",
+    "icon": "638741964582468137.jpeg",
+    "ca": 15,
+    "pv": 248,
+    "mov": 6
+  },
+  {
+    "nombre": "Roper",
+    "icon": "638741964586391490.jpeg",
+    "ca": 20,
+    "pv": 93,
+    "mov": 3
+  },
+  {
+    "nombre": "Rust Monster",
+    "icon": "638741964588887202.jpeg",
+    "ca": 14,
+    "pv": 33,
+    "mov": 12
+  },
+  {
+    "nombre": "Saber-Toothed Tiger",
+    "icon": "638741964591244625.jpeg",
+    "ca": 13,
+    "pv": 52,
+    "mov": 12
+  },
+  {
+    "nombre": "Sahuagin Baron",
+    "icon": "638741964594855520.jpeg",
+    "ca": 16,
+    "pv": 76,
+    "mov": 9
+  },
+  {
+    "nombre": "Sahuagin Priest",
+    "icon": "638741964597663134.jpeg",
+    "ca": 12,
+    "pv": 38,
+    "mov": 9
+  },
+  {
+    "nombre": "Sahuagin Warrior",
+    "icon": "638741964599553627.jpeg",
+    "ca": 12,
+    "pv": 22,
+    "mov": 9
+  },
+  {
+    "nombre": "Salamander",
+    "icon": "638741964607375941.jpeg",
+    "ca": 15,
+    "pv": 90,
+    "mov": 9
+  },
+  {
+    "nombre": "Salamander Fire Snake",
+    "icon": "638741964602520174.jpeg",
+    "ca": 14,
+    "pv": 27,
+    "mov": 9
+  },
+  {
+    "nombre": "Salamander Inferno Master",
+    "icon": "638741964605345187.jpeg",
+    "ca": 18,
+    "pv": 256,
+    "mov": 12
+  },
+  {
+    "nombre": "Satyr",
+    "icon": "638741964611900234.jpeg",
+    "ca": 13,
+    "pv": 31,
+    "mov": 12
+  },
+  {
+    "nombre": "Satyr Revelmaster",
+    "icon": "638741964609869843.jpeg",
+    "ca": 17,
+    "pv": 82,
+    "mov": 12
+  },
+  {
+    "nombre": "Scarecrow",
+    "icon": "638741964614862309.jpeg",
+    "ca": 11,
+    "pv": 27,
+    "mov": 9
+  },
+  {
+    "nombre": "Scorpion",
+    "icon": "638607431887331936.jpeg",
+    "ca": 11,
+    "pv": 1,
+    "mov": 3
+  },
+  {
+    "nombre": "Scout",
+    "icon": "638736097250843939.jpeg",
+    "ca": 13,
+    "pv": 16,
+    "mov": 9
+  },
+  {
+    "nombre": "Scout Captain",
+    "icon": "638741964617848569.jpeg",
+    "ca": 15,
+    "pv": 66,
+    "mov": 9
+  },
+  {
+    "nombre": "Sea Hag",
+    "icon": "638741964620185281.jpeg",
+    "ca": 14,
+    "pv": 52,
+    "mov": 9
+  },
+  {
+    "nombre": "Seahorse",
+    "icon": "638741964622525623.jpeg",
+    "ca": 12,
+    "pv": 1,
+    "mov": 2
+  },
+  {
+    "nombre": "Shadow",
+    "icon": "638736097256932560.jpeg",
+    "ca": 12,
+    "pv": 27,
+    "mov": 12
+  },
+  {
+    "nombre": "Shadow Demon",
+    "icon": "638741964624729505.jpeg",
+    "ca": 14,
+    "pv": 66,
+    "mov": 9
+  },
+  {
+    "nombre": "Shadow Dragon",
+    "icon": "",
+    "ca": 16,
+    "pv": 189,
+    "mov": 12
+  },
+  {
+    "nombre": "Shambling Mound",
+    "icon": "638741964633198281.jpeg",
+    "ca": 15,
+    "pv": 110,
+    "mov": 9
+  },
+  {
+    "nombre": "Shield Guardian",
+    "icon": "638741964636047409.jpeg",
+    "ca": 17,
+    "pv": 142,
+    "mov": 9
+  },
+  {
+    "nombre": "Shrieker Fungus",
+    "icon": "638741964638874169.jpeg",
+    "ca": 5,
+    "pv": 13,
+    "mov": 2
+  },
+  {
+    "nombre": "Silver Dragon Wyrmling",
+    "icon": "638741964641520283.jpeg",
+    "ca": 17,
+    "pv": 45,
+    "mov": 9
+  },
+  {
+    "nombre": "Skeleton",
+    "icon": "638736713556477971.jpeg",
+    "ca": 14,
+    "pv": 13,
+    "mov": 9
+  },
+  {
+    "nombre": "Slaad Tadpole",
+    "icon": "638607432317842368.jpeg",
+    "ca": 12,
+    "pv": 7,
+    "mov": 9
+  },
+  {
+    "nombre": "Smoke Mephit",
+    "icon": "638741964644796444.jpeg",
+    "ca": 12,
+    "pv": 13,
+    "mov": 9
+  },
+  {
+    "nombre": "Solar",
+    "icon": "638741964647468354.jpeg",
+    "ca": 21,
+    "pv": 297,
+    "mov": 15
+  },
+  {
+    "nombre": "Spectator",
+    "icon": "638741964650924405.jpeg",
+    "ca": 14,
+    "pv": 45,
+    "mov": 2
+  },
+  {
+    "nombre": "Specter",
+    "icon": "638741964654823706.jpeg",
+    "ca": 12,
+    "pv": 22,
+    "mov": 9
+  },
+  {
+    "nombre": "Sphinx of Lore",
+    "icon": "638741964657946061.jpeg",
+    "ca": 17,
+    "pv": 170,
+    "mov": 12
+  },
+  {
+    "nombre": "Sphinx of Secrets",
+    "icon": "638741964660906462.jpeg",
+    "ca": 16,
+    "pv": 136,
+    "mov": 12
+  },
+  {
+    "nombre": "Sphinx of Valor",
+    "icon": "638741964663578548.jpeg",
+    "ca": 17,
+    "pv": 199,
+    "mov": 12
+  },
+  {
+    "nombre": "Sphinx of Wonder",
+    "icon": "638742843177864061.jpeg",
+    "ca": 13,
+    "pv": 24,
+    "mov": 6
+  },
+  {
+    "nombre": "Spider",
+    "icon": "638607433376132965.jpeg",
+    "ca": 12,
+    "pv": 1,
+    "mov": 6
+  },
+  {
+    "nombre": "Spined Devil",
+    "icon": "638741964667811141.jpeg",
+    "ca": 13,
+    "pv": 45,
+    "mov": 6
+  },
+  {
+    "nombre": "Spirit Naga",
+    "icon": "638741964670154148.jpeg",
+    "ca": 17,
+    "pv": 135,
+    "mov": 12
+  },
+  {
+    "nombre": "Sprite",
+    "icon": "638742824958813585.jpeg",
+    "ca": 15,
+    "pv": 10,
+    "mov": 3
+  },
+  {
+    "nombre": "Spy",
+    "icon": "638741964675940449.jpeg",
+    "ca": 12,
+    "pv": 27,
+    "mov": 9
+  },
+  {
+    "nombre": "Spy Master",
+    "icon": "638741964673603784.jpeg",
+    "ca": 19,
+    "pv": 137,
+    "mov": 9
+  },
+  {
+    "nombre": "Steam Mephit",
+    "icon": "638741964679062189.jpeg",
+    "ca": 10,
+    "pv": 17,
+    "mov": 9
+  },
+  {
+    "nombre": "Stirge",
+    "icon": "638741964681890158.jpeg",
+    "ca": 13,
+    "pv": 5,
+    "mov": 3
+  },
+  {
+    "nombre": "Stone Giant",
+    "icon": "638741964685342665.jpeg",
+    "ca": 17,
+    "pv": 126,
+    "mov": 12
+  },
+  {
+    "nombre": "Stone Golem",
+    "icon": "638742825752346681.jpeg",
+    "ca": 18,
+    "pv": 220,
+    "mov": 9
+  },
+  {
+    "nombre": "Storm Giant",
+    "icon": "638741964687680426.jpeg",
+    "ca": 16,
+    "pv": 230,
+    "mov": 15
+  },
+  {
+    "nombre": "Succubus",
+    "icon": "638742826507634802.jpeg",
+    "ca": 15,
+    "pv": 71,
+    "mov": 9
+  },
+  {
+    "nombre": "Swarm of Bats",
+    "icon": "638741964690510112.jpeg",
+    "ca": 12,
+    "pv": 11,
+    "mov": 2
+  },
+  {
+    "nombre": "Swarm of Crawling Claws",
+    "icon": "638736097260853364.jpeg",
+    "ca": 12,
+    "pv": 49,
+    "mov": 9
+  },
+  {
+    "nombre": "Swarm of Dretches",
+    "icon": "638741964693473143.jpeg",
+    "ca": 12,
+    "pv": 45,
+    "mov": 12
+  },
+  {
+    "nombre": "Swarm of Insects",
+    "icon": "638741964695991712.jpeg",
+    "ca": 11,
+    "pv": 19,
+    "mov": 6
+  },
+  {
+    "nombre": "Swarm of Larvae",
+    "icon": "638741964698485461.jpeg",
+    "ca": 13,
+    "pv": 22,
+    "mov": 9
+  },
+  {
+    "nombre": "Swarm of Lemures",
+    "icon": "638741964701604476.jpeg",
+    "ca": 12,
+    "pv": 45,
+    "mov": 12
+  },
+  {
+    "nombre": "Swarm of Piranhas",
+    "icon": "638741964704765770.jpeg",
+    "ca": 13,
+    "pv": 28,
+    "mov": 2
+  },
+  {
+    "nombre": "Swarm of Rats",
+    "icon": "638741964708043285.jpeg",
+    "ca": 10,
+    "pv": 14,
+    "mov": 9
+  },
+  {
+    "nombre": "Swarm of Ravens",
+    "icon": "638741964712252487.jpeg",
+    "ca": 12,
+    "pv": 11,
+    "mov": 3
+  },
+  {
+    "nombre": "Swarm of Stirges",
+    "icon": "638741964715374320.jpeg",
+    "ca": 14,
+    "pv": 36,
+    "mov": 3
+  },
+  {
+    "nombre": "Swarm of Venomous Snakes",
+    "icon": "638741964718648534.jpeg",
+    "ca": 14,
+    "pv": 36,
+    "mov": 9
+  },
+  {
+    "nombre": "Tarrasque",
+    "icon": "638741964721031185.jpeg",
+    "ca": 25,
+    "pv": 697,
+    "mov": 18
+  },
+  {
+    "nombre": "Thri-kreen Marauder",
+    "icon": "638741964723368573.jpeg",
+    "ca": 15,
+    "pv": 33,
+    "mov": 12
+  },
+  {
+    "nombre": "Thri-kreen Psion",
+    "icon": "638741964725708588.jpeg",
+    "ca": 16,
+    "pv": 149,
+    "mov": 12
+  },
+  {
+    "nombre": "Tiger",
+    "icon": "638607434270663754.jpeg",
+    "ca": 13,
+    "pv": 30,
+    "mov": 12
+  },
+  {
+    "nombre": "Tough",
+    "icon": "638741964727756616.jpeg",
+    "ca": 12,
+    "pv": 32,
+    "mov": 9
+  },
+  {
+    "nombre": "Tough Boss",
+    "icon": "638742827270411773.jpeg",
+    "ca": 16,
+    "pv": 82,
+    "mov": 9
+  },
+  {
+    "nombre": "Treant",
+    "icon": "638741964730408582.jpeg",
+    "ca": 16,
+    "pv": 138,
+    "mov": 9
+  },
+  {
+    "nombre": "Tree Blight",
+    "icon": "638741964733690367.jpeg",
+    "ca": 15,
+    "pv": 115,
+    "mov": 9
+  },
+  {
+    "nombre": "Triceratops",
+    "icon": "638741964736650195.jpeg",
+    "ca": 14,
+    "pv": 114,
+    "mov": 15
+  },
+  {
+    "nombre": "Troglodyte",
+    "icon": "638741964739632633.jpeg",
+    "ca": 11,
+    "pv": 13,
+    "mov": 9
+  },
+  {
+    "nombre": "Troll",
+    "icon": "638741964745290773.jpeg",
+    "ca": 15,
+    "pv": 94,
+    "mov": 9
+  },
+  {
+    "nombre": "Troll Limb",
+    "icon": "638741964742304698.jpeg",
+    "ca": 13,
+    "pv": 14,
+    "mov": 6
+  },
+  {
+    "nombre": "Twig Blight",
+    "icon": "638741964747476449.jpeg",
+    "ca": 14,
+    "pv": 7,
+    "mov": 6
+  },
+  {
+    "nombre": "Tyrannosaurus Rex",
+    "icon": "638741964750280660.jpeg",
+    "ca": 13,
+    "pv": 136,
+    "mov": 15
+  },
+  {
+    "nombre": "Ultroloth",
+    "icon": "638741964753264791.jpeg",
+    "ca": 19,
+    "pv": 221,
+    "mov": 9
+  },
+  {
+    "nombre": "Umber Hulk",
+    "icon": "638741964756232197.jpeg",
+    "ca": 18,
+    "pv": 93,
+    "mov": 9
+  },
+  {
+    "nombre": "Unicorn",
+    "icon": "638741964759974517.jpeg",
+    "ca": 12,
+    "pv": 97,
+    "mov": 15
+  },
+  {
+    "nombre": "Vampire",
+    "icon": "638741964773585163.jpeg",
+    "ca": 16,
+    "pv": 195,
+    "mov": 12
+  },
+  {
+    "nombre": "Vampire Familiar",
+    "icon": "638741964763404684.jpeg",
+    "ca": 15,
+    "pv": 65,
+    "mov": 9
+  },
+  {
+    "nombre": "Vampire Nightbringer",
+    "icon": "638741964765608708.jpeg",
+    "ca": 16,
+    "pv": 142,
+    "mov": 9
+  },
+  {
+    "nombre": "Vampire Spawn",
+    "icon": "638741964767968701.jpeg",
+    "ca": 16,
+    "pv": 90,
+    "mov": 9
+  },
+  {
+    "nombre": "Vampire Umbral Lord",
+    "icon": "638741964770776744.jpeg",
+    "ca": 16,
+    "pv": 187,
+    "mov": 12
+  },
+  {
+    "nombre": "Venomous Snake",
+    "icon": "638742839551377351.jpeg",
+    "ca": 12,
+    "pv": 5,
+    "mov": 9
+  },
+  {
+    "nombre": "Vine Blight",
+    "icon": "638741964776588758.jpeg",
+    "ca": 12,
+    "pv": 19,
+    "mov": 6
+  },
+  {
+    "nombre": "Violet Fungus",
+    "icon": "638741964782518694.jpeg",
+    "ca": 5,
+    "pv": 18,
+    "mov": 2
+  },
+  {
+    "nombre": "Violet Fungus Necrohulk",
+    "icon": "638741964779396729.jpeg",
+    "ca": 17,
+    "pv": 123,
+    "mov": 12
+  },
+  {
+    "nombre": "Vrock",
+    "icon": "638741964785344780.jpeg",
+    "ca": 15,
+    "pv": 152,
+    "mov": 12
+  },
+  {
+    "nombre": "Vulture",
+    "icon": "638741964788173651.jpeg",
+    "ca": 10,
+    "pv": 5,
+    "mov": 3
+  },
+  {
+    "nombre": "Warhorse",
+    "icon": "638607434778564331.jpeg",
+    "ca": 11,
+    "pv": 19,
+    "mov": 18
+  },
+  {
+    "nombre": "Warhorse Skeleton",
+    "icon": "638741964791761149.jpeg",
+    "ca": 13,
+    "pv": 22,
+    "mov": 18
+  },
+  {
+    "nombre": "Warrior Commander",
+    "icon": "638741964794571789.jpeg",
+    "ca": 18,
+    "pv": 161,
+    "mov": 9
+  },
+  {
+    "nombre": "Warrior Infantry",
+    "icon": "638741964797380677.jpeg",
+    "ca": 13,
+    "pv": 9,
+    "mov": 9
+  },
+  {
+    "nombre": "Warrior Veteran",
+    "icon": "638741964800207399.jpeg",
+    "ca": 17,
+    "pv": 65,
+    "mov": 9
+  },
+  {
+    "nombre": "Water Elemental",
+    "icon": "638741964803171793.jpeg",
+    "ca": 14,
+    "pv": 114,
+    "mov": 9
+  },
+  {
+    "nombre": "Water Weird",
+    "icon": "638741964806446910.jpeg",
+    "ca": 13,
+    "pv": 65,
+    "mov": 2
+  },
+  {
+    "nombre": "Weasel",
+    "icon": "638607435159394573.jpeg",
+    "ca": 13,
+    "pv": 1,
+    "mov": 9
+  },
+  {
+    "nombre": "Werebear",
+    "icon": "638741964809408841.jpeg",
+    "ca": 15,
+    "pv": 135,
+    "mov": 9
+  },
+  {
+    "nombre": "Wereboar",
+    "icon": "638741964811750604.jpeg",
+    "ca": 15,
+    "pv": 97,
+    "mov": 9
+  },
+  {
+    "nombre": "Wererat",
+    "icon": "638741964814579558.jpeg",
+    "ca": 13,
+    "pv": 60,
+    "mov": 9
+  },
+  {
+    "nombre": "Weretiger",
+    "icon": "638741964816782355.jpeg",
+    "ca": 12,
+    "pv": 120,
+    "mov": 9
+  },
+  {
+    "nombre": "Werewolf",
+    "icon": "638741964819591780.jpeg",
+    "ca": 15,
+    "pv": 71,
+    "mov": 9
+  },
+  {
+    "nombre": "White Dragon Wyrmling",
+    "icon": "638741964822241116.jpeg",
+    "ca": 16,
+    "pv": 32,
+    "mov": 9
+  },
+  {
+    "nombre": "Wight",
+    "icon": "638741964826473116.jpeg",
+    "ca": 14,
+    "pv": 82,
+    "mov": 9
+  },
+  {
+    "nombre": "Will-o'-Wisp",
+    "icon": "",
+    "ca": 19,
+    "pv": 27,
+    "mov": 2
+  },
+  {
+    "nombre": "Winged Kobold",
+    "icon": "638741964832117357.jpeg",
+    "ca": 15,
+    "pv": 10,
+    "mov": 9
+  },
+  {
+    "nombre": "Winter Wolf",
+    "icon": "638741964834940005.jpeg",
+    "ca": 13,
+    "pv": 75,
+    "mov": 15
+  },
+  {
+    "nombre": "Wolf",
+    "icon": "638607435567745183.jpeg",
+    "ca": 12,
+    "pv": 11,
+    "mov": 12
+  },
+  {
+    "nombre": "Worg",
+    "icon": "638742828060220396.jpeg",
+    "ca": 13,
+    "pv": 26,
+    "mov": 15
+  },
+  {
+    "nombre": "Wraith",
+    "icon": "638736097265257999.jpeg",
+    "ca": 13,
+    "pv": 67,
+    "mov": 2
+  },
+  {
+    "nombre": "Wyvern",
+    "icon": "638741964837631614.jpeg",
+    "ca": 14,
+    "pv": 127,
+    "mov": 9
+  },
+  {
+    "nombre": "Xorn",
+    "icon": "638741964840772804.jpeg",
+    "ca": 19,
+    "pv": 84,
+    "mov": 6
+  },
+  {
+    "nombre": "Yeti",
+    "icon": "638741964843734495.jpeg",
+    "ca": 12,
+    "pv": 51,
+    "mov": 12
+  },
+  {
+    "nombre": "Yochlol",
+    "icon": "638741964846386797.jpeg",
+    "ca": 15,
+    "pv": 153,
+    "mov": 9
+  },
+  {
+    "nombre": "Young Black Dragon",
+    "icon": "638741964849995952.jpeg",
+    "ca": 18,
+    "pv": 127,
+    "mov": 12
+  },
+  {
+    "nombre": "Young Blue Dragon",
+    "icon": "638741964852805531.jpeg",
+    "ca": 18,
+    "pv": 152,
+    "mov": 12
+  },
+  {
+    "nombre": "Young Brass Dragon",
+    "icon": "638741964855787850.jpeg",
+    "ca": 17,
+    "pv": 110,
+    "mov": 12
+  },
+  {
+    "nombre": "Young Bronze Dragon",
+    "icon": "638741964859396403.jpeg",
+    "ca": 17,
+    "pv": 142,
+    "mov": 12
+  },
+  {
+    "nombre": "Young Copper Dragon",
+    "icon": "638741964862670882.jpeg",
+    "ca": 17,
+    "pv": 119,
+    "mov": 12
+  },
+  {
+    "nombre": "Young Gold Dragon",
+    "icon": "638741964865322764.jpeg",
+    "ca": 18,
+    "pv": 178,
+    "mov": 12
+  },
+  {
+    "nombre": "Young Green Dragon",
+    "icon": "638741964868909928.jpeg",
+    "ca": 18,
+    "pv": 136,
+    "mov": 12
+  },
+  {
+    "nombre": "Young Red Dragon",
+    "icon": "638741964871424997.jpeg",
+    "ca": 18,
+    "pv": 178,
+    "mov": 12
+  },
+  {
+    "nombre": "Young Remorhaz",
+    "icon": "638741964873921035.jpeg",
+    "ca": 14,
+    "pv": 93,
+    "mov": 9
+  },
+  {
+    "nombre": "Young Silver Dragon",
+    "icon": "638741964876730922.jpeg",
+    "ca": 18,
+    "pv": 168,
+    "mov": 12
+  },
+  {
+    "nombre": "Young White Dragon",
+    "icon": "638741964879089116.jpeg",
+    "ca": 17,
+    "pv": 123,
+    "mov": 12
+  },
+  {
+    "nombre": "Yuan-ti Abomination",
+    "icon": "638741964881918563.jpeg",
+    "ca": 15,
+    "pv": 127,
+    "mov": 12
+  },
+  {
+    "nombre": "Yuan-ti Infiltrator",
+    "icon": "638741964885195017.jpeg",
+    "ca": 11,
+    "pv": 40,
+    "mov": 9
+  },
+  {
+    "nombre": "Yuan-ti Malison (Type 1)",
+    "icon": "638741964887535246.jpeg",
+    "ca": 12,
+    "pv": 66,
+    "mov": 9
+  },
+  {
+    "nombre": "Yuan-ti Malison (Type 2)",
+    "icon": "638741964890190959.jpeg",
+    "ca": 12,
+    "pv": 66,
+    "mov": 9
+  },
+  {
+    "nombre": "Yuan-ti Malison (Type 3)",
+    "icon": "638741964893949132.jpeg",
+    "ca": 12,
+    "pv": 66,
+    "mov": 9
+  },
+  {
+    "nombre": "Zombie",
+    "icon": "638736718979497977.jpeg",
+    "ca": 8,
+    "pv": 15,
+    "mov": 6
   }
 ]
