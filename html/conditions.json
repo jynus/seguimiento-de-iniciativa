@@ -2,7 +2,7 @@
   { "key": "blinded",       "english": "Blinded",       "spanish": "Cegado",        "color": "#f7e247", "synonyms": ["cegado","ciego","blind"] },
   { "key": "charmed",       "english": "Charmed",       "spanish": "Hechizado",     "color": "#ff77e1", "synonyms": ["hechizado","encantado","charm"] },
   { "key": "deafened",      "english": "Deafened",      "spanish": "Ensordecido",   "color": "#a78bfa", "synonyms": ["ensordecido","sordo","deaf"] },
-  { "key": "frightened",    "english": "Frightened",    "spanish": "Asustado",      "color": "#f59e0b", "synonyms": ["asustado","miedo","frightened"] },
+  { "key": "frightened",    "english": "Frightened",    "spanish": "Asustado",      "color": "#f59e0b", "synonyms": ["asustado","atemorizado", "miedo","frightened"] },
   { "key": "grappled",      "english": "Grappled",      "spanish": "Agarrado",      "color": "#afa47a", "synonyms": ["agarrado","asido","grapple"] },
   { "key": "incapacitated", "english": "Incapacitated", "spanish": "Incapacitado",  "color": "#64748b", "synonyms": ["incapacitado","incapaz","incapacitated"] },
   { "key": "invisible",     "english": "Invisible",     "spanish": "Invisible",     "color": "#111827", "synonyms": ["invisible","oculto","hidden"] },
@@ -17,6 +17,15 @@
   { "key": "dazed",         "english": "Dazed",         "spanish": "Atontado",      "color": "#c084fc", "synonyms": ["atontado","dazed"] },
   { "key": "concentrating", "english": "Concentrating", "spanish": "Concentrado",   "color": "#ffffff", "synonyms": ["concentrado","concentración","concentration"] },
   { "key": "hidden",        "english": "Hidden",        "spanish": "Escondido",     "color": "#111827", "synonyms": ["escondido","oculto","hidden"] },
-  { "key": "bleeding",      "english": "Bleeding",      "spanish": "Sangrando",     "color": "#b91c1c", "synonyms": ["sangrando","sangrado","bleeding"] }
+  { "key": "bloodied",      "english": "Bloodied",      "spanish": "Maltrecho",     "color": "#b91c1c", "synonyms": ["maltrecho", "sangrando","sangrado","bleeding","blood", "bloodied"] },
+  { "key": "wounded",       "english": "Wounded",      "spanish": "Herido",     "color": "#f59e0b", "synonyms": ["herido","herida","hiriendo","wound","wounding"] },
+  { "key": "barely-standing", "english": "Barely Standing", "spanish": "Apenas vivo", "color": "#7f1d1d", "synonyms": ["apenas vivo", "barely standing"] },
+  { "key": "dead",            "english": "Dead",      "spanish": "Muerto",     "color": "#ff0000", "synonyms": ["muerto","unalived"] },
+  {"key":"heroic-inspiration","english":"Heroic Inspiration","spanish":"Inspiración heroica","color":"#D8B4FE","synonyms":["Heroic inspiration","Inspiración heroica","Inspiración heróica"]},
+  {"key":"bardic-inspiration","english":"Bardic Inspiration","spanish":"Inspiración bárdica","color":"#FBCFE8","synonyms":["Bardic inspiration","Inspiración bardica","Inspiración bárdica","Inpiración bárdica"]},
+  {"key": "dehydratation", "english": "Dehydratation", "spanish":"Deshidratación", "color": "#f59e0b", "synonyms": ["deshidratacion", "agua", "water"]},
+  {"key": "malnutrition", "english": "Malnutrition", "spanish":"Desnutrición", "color": "#f59e0b", "synonyms": ["comida", "food", "malnutrición"]},
+  {"key": "burning", "english": "Burning", "spanish": "Fuego", "color": "#ffff00", "synonyms": ["quemando", "quemado", "llamas", "fire"]},
+  {"key": "cursed", "english": "Cursed", "spanish": "Maldito", "color": "#c084fc", "synonyms": ["maldición", "curse"]}
 ]
 
