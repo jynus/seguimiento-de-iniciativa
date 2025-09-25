@@ -633,6 +633,34 @@ function togglePill(p,field){
   return el;
 }
 
+function makeActionPill(p, field, label, title){
+  const el = document.createElement("span");
+  const paint = () => {
+    el.className = "pill " + (p[field] ? "on" : "off") + " min";
+    el.textContent = label;
+    el.title = `${title} — ${p[field] ? "Usada" : "Disponible"}`;
+  };
+  paint();
+  el.addEventListener("click", (e) => {
+    e.stopPropagation();
+    p[field] = !p[field];
+    paint();
+    sync();
+  });
+  return el;
+}
+
+function actionsGroup(p){
+  const box = document.createElement("div");
+  box.className = "actg";
+  box.append(
+    makeActionPill(p, "accion",    "A", "Acción"),
+    makeActionPill(p, "adicional", "B", "Acción adicional"),
+    makeActionPill(p, "reaccion",  "R", "Reacción")
+  );
+  return box;
+}
+
 function render(){
   rows.innerHTML="";
   state.party.forEach((p,idx)=>{
@@ -819,9 +847,7 @@ function render(){
       tdPV.append(cur, document.createTextNode(" / "), max);
     }
 
-    const tdA=td(); tdA.appendChild(togglePill(p,"accion"));
-    const tdB=td(); tdB.appendChild(togglePill(p,"adicional"));
-    const tdR=td(); tdR.appendChild(togglePill(p,"reaccion"));
+    const tdAct = td(); tdAct.appendChild(actionsGroup(p));
 
     const tdM = td(); {
       const cur = makeNum(p.mov.cur ?? 0, (v) => {
@@ -1004,7 +1030,7 @@ function render(){
 
     tdTools.append(eyeBtn, document.createTextNode(" "), addInput, addBtn, dupBtn, document.createTextNode(" "), delBtn);
 
-    tr.append(tdDrag, tdIni,tdIcon,tdNom,tdCA,tdPV,tdA,tdB,tdR,tdM,tdC,tdTools);
+    tr.append(tdDrag, tdIni,tdIcon,tdNom,tdCA,tdPV,tdAct,tdM,tdC,tdTools);
     rows.appendChild(tr);
   });
 }

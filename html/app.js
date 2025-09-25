@@ -55,6 +55,22 @@ function fmtHalf(n) {
     : "-";
 }
 
+function actionsGroupReadOnly(p){
+  const box = document.createElement("div");
+  box.className = "actg";
+  const add = (field, label, title) => {
+    const el = document.createElement("span");
+    el.className = "pill " + (p[field] ? "on" : "off") + " min";
+    el.textContent = label;
+    el.title = `${title} — ${p[field] ? "Usada" : "Disponible"}`;
+    box.appendChild(el);
+  };
+  add("accion", "A", "Acción");
+  add("adicional", "B", "Acción adicional");
+  add("reaccion", "R", "Reacción");
+  return box;
+}
+
 // ====== Estado ======
 let state = { party: [], activeIdx: 0 };
 
@@ -119,9 +135,7 @@ function render(){
     }
 
     const tdNom = td(p.nombre ?? "—");
-    const tdA=td(); tdA.innerHTML=`<span class="pill ${p.accion?'on':'off'}">${p.accion?'Usada':'Disponible'}</span>`;
-    const tdB=td(); tdB.innerHTML=`<span class="pill ${p.adicional?'on':'off'}">${p.adicional?'Usada':'Disponible'}</span>`;
-    const tdR=td(); tdR.innerHTML=`<span class="pill ${p.reaccion?'on':'off'}">${p.reaccion?'Usada':'Disponible'}</span>`;
+    const tdAct = td(); tdAct.appendChild(actionsGroupReadOnly(p));
     const tdM=td(); {
       const box=document.createElement("span"); box.className="mv";
       const pr=document.createElement("span"); pr.className="pair";
@@ -131,7 +145,7 @@ function render(){
     }
     const tdC=td(); tdC.appendChild(chips(p.condiciones||[]));
 
-    tr.append(tdIcon,tdNom,tdA,tdB,tdR,tdM,tdC);
+    tr.append(tdIcon,tdNom,tdAct,tdM,tdC);
     rows.appendChild(tr);
   });
 }

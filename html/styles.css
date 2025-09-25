@@ -36,7 +36,7 @@ col.ini{width:42px}
 col.cn{width:42px}
 col.ca{width:42px}
 col.pv{width:85px}
-col.ax, col.ad, col.rx{width:86px}
+col.act{width:90px}
 col.mv{width:30px}
 col.tools{width:200px}
 
@@ -61,6 +61,10 @@ col.tools{width:200px}
 }
 .pill.on{background:color-mix(in oklab, var(--accent) 24%, transparent);border-color:color-mix(in oklab, var(--accent) 60%, transparent);color:#dff0ff}
 .pill.off{background:#0c1020;color:#a9b0c3}
+
+/* Grupo Acciones (A/B/R compactas) */
+.actg{display:inline-flex;gap:4px}
+.pill.min{min-width:22px;padding:0 4px;font-weight:700}
 
 /* movimiento */
 .mv{display:inline-flex;align-items:left;gap:4px;font-variant-numeric:tabular-nums}
