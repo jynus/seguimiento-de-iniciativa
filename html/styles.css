@@ -151,3 +151,25 @@ tbody tr.hidden-for-clients{
   color: #fff;
 }
 .hp-popover .btn.heal:hover { background: #065f46; }
+
+/* Columna y asa de arrastre */
+col.drag { width: 16px; }
+td.drag  { padding: 0 2px; }
+
+.drag-handle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 100%;
+  user-select: none;
+  cursor: grab;            /* cursor para mover */
+  opacity: .55;
+  color: #b8becc;          /* color de los puntitos ⋮ */
+}
+.drag-handle:hover{ opacity: .95; }
+tbody tr.dragging .drag-handle{ cursor: grabbing; }
+
+/* Feedback de destino */
+tbody tr.drop-before { box-shadow: inset 0 2px 0 var(--accent-2); }
+tbody tr.drop-after  { box-shadow: inset 0 -2px 0 var(--accent-2); }

@@ -7,6 +7,9 @@ const TOKEN  = new URLSearchParams(location.search).get("token") || "";
 const COND_URL = "conditions.json";
 const PERSONAJES_URL = "personajes.json";
 const MONSTRUOS_URL  = "monstruos.json";
+const dnd = { from: null, ini: null };
+let dndDragging = false;
+let dndSuppressClickUntil = 0;
 
 let CONDITIONS = [];
 let condIndex = { get: () => null, norm: (s) => String(s || "").trim().toLowerCase() };
@@ -355,12 +358,11 @@ function roundToHalf(n) {
 
 function sortPartyByIni() {
   const curId = state.party[state.activeIdx]?.id;
+  // Only compare initiative; modern JS sort is stable, so equal Ini. keeps current order
   state.party.sort((a, b) => {
     const ai = Number.isFinite(a?.ini) ? a.ini : -Infinity;
     const bi = Number.isFinite(b?.ini) ? b.ini : -Infinity;
-    if (bi !== ai) return bi - ai;
-    // desempate estable por nombre
-    return String(a?.nombre || "").localeCompare(String(b?.nombre || ""), "es", {sensitivity:"base"});
+    return bi - ai;
   });
   if (curId) {
     const i = state.party.findIndex(x => x.id === curId);
@@ -635,11 +637,92 @@ function render(){
   rows.innerHTML="";
   state.party.forEach((p,idx)=>{
     const tr=document.createElement("tr");
+
+    // Allow drop only on rows with SAME initiative
+    tr.addEventListener("dragover", (e) => {
+      if (dnd.from === null) return;
+      const myIni = Number(state.party[idx]?.ini) || 0;
+      if (myIni !== dnd.ini) return;
+      e.preventDefault(); // allow drop
+      e.dataTransfer.dropEffect = "move";
+
+      const r = tr.getBoundingClientRect();
+      const after = (e.clientY - r.top) > (r.height / 2);
+      tr.classList.toggle("drop-before", !after);
+      tr.classList.toggle("drop-after",  after);
+    });
+
+    tr.addEventListener("dragleave", () => {
+      tr.classList.remove("drop-before","drop-after");
+    });
+
+    tr.addEventListener("drop", (e) => {
+      if (dnd.from === null) return;
+      const myIni = Number(state.party[idx]?.ini) || 0;
+      if (myIni !== dnd.ini) return;
+      e.preventDefault();
+      e.stopPropagation();
+
+      const r = tr.getBoundingClientRect();
+      const after = (e.clientY - r.top) > (r.height / 2);
+      let to = idx + (after ? 1 : 0);
+
+      const draggedWasActive = (state.activeIdx === dnd.from);
+
+      // Move array element
+      const item = state.party.splice(dnd.from, 1)[0];
+      if (to > dnd.from) to--;              // account for removal shift
+      state.party.splice(to, 0, item);
+
+      // Solo si el arrastrado era el activo, actualiza su índice activo
+      if (draggedWasActive) {
+        const newIdx = state.party.indexOf(item);
+        if (newIdx >= 0) state.activeIdx = newIdx;
+      }
+
+      // Clean and repaint
+      dnd.from = null; dnd.ini = null;
+      dndDragging = false;
+      dndSuppressClickUntil = Date.now() + 250; // evita que el click de “soltar” active la fila destino
+      sync(); render();
+    });
+
+
     if(idx===state.activeIdx) tr.classList.add("active");
     if (p.visible === false) tr.classList.add("hidden-for-clients");
     if(typeof p.pv!=="object") p.pv={cur:p.pv??0,max:p.pv??0};
     if(typeof p.mov==="number") p.mov={cur:p.mov,max:p.mov};
     if(!p.mov) p.mov={cur:0,max:0};
+
+    // --- Drag handle (first column) ---
+    const tdDrag = td(); tdDrag.className = "drag";
+    const handle = document.createElement("span");
+    handle.className = "drag-handle";
+    handle.title = "Reordenar dentro de la misma iniciativa";
+    handle.draggable = true;
+    handle.textContent = "⋮";
+
+    // Start dragging
+    handle.addEventListener("dragstart", (e) => {
+      dndDragging = true;
+      dnd.from = idx;
+      dnd.ini  = Number(state.party[idx]?.ini) || 0;
+      tr.classList.add("dragging");
+      // Required so drop fires in some browsers
+      e.dataTransfer.setData("text/plain", state.party[idx].id);
+      e.dataTransfer.effectAllowed = "move";
+    });
+
+    // Clean up
+    handle.addEventListener("dragend", () => {
+      dndDragging = false;
+      dndSuppressClickUntil = Date.now() + 250; // ignora el click que sigue al drop
+      dnd.from = null; dnd.ini = null;
+      document.querySelectorAll(".drop-before,.drop-after,.dragging")
+        .forEach(el => el.classList.remove("drop-before","drop-after","dragging"));
+    });
+
+    tdDrag.appendChild(handle);
 
     const initials = p.nombre?.split(/\s+/).map(w=>w[0]).join("") || "??";
     const iconSrc = p.icon || svgAvatar(initials);
@@ -838,7 +921,13 @@ function render(){
       }
     });
 
-    tr.addEventListener("click",(e)=>{ if(e.target.closest("input,button,.chip,.avatar")) return; setActiveIdx(idx); });
+    tr.addEventListener("click",(e)=>{
+      if(e.target.closest("input,button,.chip,.avatar,.drag-handle")) return;
+      if (dndDragging) return;
+      if (Date.now() < dndSuppressClickUntil) return;
+      setActiveIdx(idx);
+    });
+
     addInput.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
         e.preventDefault();
@@ -915,7 +1004,7 @@ function render(){
 
     tdTools.append(eyeBtn, document.createTextNode(" "), addInput, addBtn, dupBtn, document.createTextNode(" "), delBtn);
 
-    tr.append(tdIni,tdIcon,tdNom,tdCA,tdPV,tdA,tdB,tdR,tdM,tdC,tdTools);
+    tr.append(tdDrag, tdIni,tdIcon,tdNom,tdCA,tdPV,tdA,tdB,tdR,tdM,tdC,tdTools);
     rows.appendChild(tr);
   });
 }
