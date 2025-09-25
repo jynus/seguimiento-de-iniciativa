@@ -900,9 +900,6 @@ function render(){
     addInput.style.width="80px";
     addInput.setAttribute("list", "cond-suggestions");
 
-    const addBtn=btn("＋");
-    addBtn.classList.add("small");
-
     // Misma lógica para click y Enter
     const addCond = () => {
       const v = addInput.value.trim();
@@ -916,8 +913,6 @@ function render(){
       sync(); render();
       addInput.focus();
     };
-
-    addBtn.addEventListener("click",(e)=>{ e.stopPropagation(); addCond(); });
 
     addInput.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
@@ -1028,7 +1023,7 @@ function render(){
     delBtn.addEventListener("click",(e)=>{ e.stopPropagation(); state.party.splice(idx,1);
       if(state.activeIdx>=state.party.length) state.activeIdx=Math.max(0,state.party.length-1); sync(); render(); });
 
-    tdTools.append(eyeBtn, document.createTextNode(" "), addInput, addBtn, dupBtn, document.createTextNode(" "), delBtn);
+    tdTools.append(addInput, document.createTextNode(" "), eyeBtn, document.createTextNode(" "), dupBtn, document.createTextNode(" "), delBtn);
 
     tr.append(tdDrag, tdIni,tdIcon,tdNom,tdCA,tdPV,tdAct,tdM,tdC,tdTools);
     rows.appendChild(tr);
